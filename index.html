@@ -4,7 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>社長の計算機｜経営判断に使える無料計算ツール集</title>
-<meta name="description" content="損益分岐点、粗利率、借入返済、資金繰り、人件費率、消費税、法人税、値上げ利益など、中小企業社長向けの無料計算ツール集。">
+<meta name="description" content="損益分岐点、粗利率、利益率、借入返済、資金繰り、人件費率、消費税、法人税、値上げ利益など、中小企業社長向けの無料計算ツール集。">
+<meta name="google-site-verification" content="uHDfpwIdxX5a-wR2us1cQxIRfwJR8iL_qfj3HCRR1EM" />
+
 <style>
 *{box-sizing:border-box}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;background:#f6f8fb;color:#111827;line-height:1.7}
@@ -34,8 +36,8 @@ label{font-weight:700;font-size:14px}
 input,select{width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:10px;font-size:16px;margin-top:6px}
 .result{background:#f8fafc;border-left:5px solid #2563eb;padding:16px;border-radius:12px;margin-top:16px;font-weight:700}
 .note{font-size:13px;color:#64748b;margin-top:12px}
-.ad{background:#eef2ff;border:1px dashed #6366f1;color:#3730a3;text-align:center;padding:18px;border-radius:14px;margin:24px 0;font-weight:700}
 footer{text-align:center;color:#64748b;font-size:13px;padding:36px 20px}
+footer a{color:#2563eb;text-decoration:none}
 .badge{display:inline-block;background:#e0f2fe;color:#0369a1;border-radius:999px;padding:4px 10px;font-size:12px;font-weight:700;margin-bottom:10px}
 @media(max-width:850px){
   .grid,.form{grid-template-columns:1fr}
@@ -46,7 +48,7 @@ footer{text-align:center;color:#64748b;font-size:13px;padding:36px 20px}
 }
 </style>
 </head>
-<meta name="google-site-verification" content="uHDfpwIdxX5a-wR2us1cQxIRfwJR8iL_qfj3HCRR1EM" />
+
 <body>
 
 <header>
@@ -82,12 +84,14 @@ footer{text-align:center;color:#64748b;font-size:13px;padding:36px 20px}
       <p>固定費と粗利率から、黒字化に必要な売上を計算します。</p>
       <button onclick="jump('breakEven')">使う</button>
     </div>
+
     <div class="card">
       <span class="badge">資金繰り</span>
       <h3>借入返済シミュレーター</h3>
       <p>借入額・金利・期間から毎月返済額を計算します。</p>
       <button onclick="jump('loan')">使う</button>
     </div>
+
     <div class="card">
       <span class="badge">危険度</span>
       <h3>資金寿命計算機</h3>
@@ -97,19 +101,15 @@ footer{text-align:center;color:#64748b;font-size:13px;padding:36px 20px}
   </div>
 </section>
 
-<div class="ad">広告枠：Google AdSense / アフィリエイト広告をここに配置</div>
-
 <section id="tools">
 
-<!-- 1 -->
 <div class="calc" id="breakEven">
   <h2>損益分岐点計算機</h2>
-  <p class="desc"><p class="desc">
-この計算機では、毎月の固定費と粗利率から黒字化に必要な売上を算出できます。
-売上が伸びていても利益が出ない場合、固定費が重すぎる可能性があります。
-損益分岐点を把握することで、最低限必要な売上ラインが明確になり、
-経営判断や価格設定の基準として活用できます。
-</p></p>
+  <p class="desc">
+    この計算機では、毎月の固定費と粗利率から黒字化に必要な売上を算出できます。
+    売上が伸びていても利益が出ない場合、固定費が重すぎる可能性があります。
+    損益分岐点を把握することで、最低限必要な売上ラインが明確になり、経営判断や価格設定の基準として活用できます。
+  </p>
   <div class="form">
     <label>月固定費（円）<input type="number" id="beFixed" placeholder="例：1200000"></label>
     <label>粗利率（%）<input type="number" id="beMargin" placeholder="例：40"></label>
@@ -120,15 +120,14 @@ footer{text-align:center;color:#64748b;font-size:13px;padding:36px 20px}
   <p class="note">計算式：必要売上 =（固定費 + 目標利益）÷ 粗利率</p>
 </div>
 
-<!-- 2 -->
 <div class="calc" id="grossProfit">
   <h2>粗利率計算機</h2>
-  <p class="desc"><p class="desc">
-この計算機では、売上と原価から粗利額と粗利率を算出できます。
-粗利率はビジネスの収益性を示す重要な指標です。
-一般的に粗利率が低い場合、利益が出にくくなり資金繰りが悪化しやすくなります。
-改善のための指標として活用してください。
-</p></p>
+  <p class="desc">
+    この計算機では、売上と原価から粗利額と粗利率を算出できます。
+    粗利率はビジネスの収益性を示す重要な指標です。
+    一般的に粗利率が低い場合、利益が出にくくなり資金繰りが悪化しやすくなります。
+    改善のための指標として活用してください。
+  </p>
   <div class="form">
     <label>売上（円）<input type="number" id="gpSales" placeholder="例：3000000"></label>
     <label>原価（円）<input type="number" id="gpCost" placeholder="例：1800000"></label>
@@ -136,126 +135,44 @@ footer{text-align:center;color:#64748b;font-size:13px;padding:36px 20px}
   <button onclick="calcGrossProfit()">計算する</button>
   <div class="result" id="gpResult">結果がここに表示されます</div>
 </div>
-  <div class="calc">
-<h2>利益率計算機</h2>
-<p class="desc">
-売上と利益から利益率を算出します。
-利益率は会社の収益力を示す重要な指標であり、
-低い場合はコスト構造や価格設定に課題がある可能性があります。
-改善の方向性を考える際の参考にしてください。
-</p>
-</p></p>
-売上：<input id="sales1"><br>
-利益：<input id="profit1"><br>
-<button onclick="calc1()">計算</button>
-<div id="r1"></div>
+
+<div class="calc" id="profitRate">
+  <h2>利益率計算機</h2>
+  <p class="desc">
+    売上と利益から利益率を算出します。
+    利益率は会社の収益力を示す重要な指標であり、低い場合はコスト構造や価格設定に課題がある可能性があります。
+    改善の方向性を考える際の参考にしてください。
+  </p>
+  <div class="form">
+    <label>売上（円）<input type="number" id="profitSales" placeholder="例：3000000"></label>
+    <label>利益（円）<input type="number" id="profitAmount" placeholder="例：450000"></label>
+  </div>
+  <button onclick="calcProfitRate()">計算する</button>
+  <div class="result" id="profitResult">結果がここに表示されます</div>
 </div>
 
-<script>
-function calc1(){
-let s=document.getElementById("sales1").value;
-let p=document.getElementById("profit1").value;
-let r=(p/s)*100;
-document.getElementById("r1").innerText="利益率："+r.toFixed(1)+"%";
-}
-</script>
-
-  <div class="calc">
-<h2>固定費比率計算</h2>
-<p class="desc">
-売上に対する固定費の割合を計算します。
-固定費が高いと売上減少時に利益が出にくくなります。
-安全な経営を維持するために、固定費の水準を把握することが重要です。
-</p>
-売上：<input id="sales2"><br>
-固定費：<input id="fixed2"><br>
-<button onclick="calc2()">計算</button>
-<div id="r2"></div>
+<div class="calc" id="fixedRate">
+  <h2>固定費比率計算機</h2>
+  <p class="desc">
+    売上に対する固定費の割合を計算します。
+    固定費が高いと売上減少時に利益が出にくくなります。
+    安全な経営を維持するために、固定費の水準を把握することが重要です。
+  </p>
+  <div class="form">
+    <label>売上（円）<input type="number" id="fixedSales" placeholder="例：3000000"></label>
+    <label>固定費（円）<input type="number" id="fixedCost" placeholder="例：1200000"></label>
+  </div>
+  <button onclick="calcFixedRate()">計算する</button>
+  <div class="result" id="fixedResult">結果がここに表示されます</div>
 </div>
 
-<script>
-function calc2(){
-let s=document.getElementById("sales2").value;
-let f=document.getElementById("fixed2").value;
-let r=(f/s)*100;
-document.getElementById("r2").innerText="固定費比率："+r.toFixed(1)+"%";
-}
-</script>
-
-  <div class="calc">
-<h2>月商不足額計算</h2>
-<p class="desc">
-現在の売上と目標売上から、不足している売上額を計算します。
-目標達成までのギャップを可視化することで、
-営業活動や価格戦略の改善に役立てることができます。
-</p>
-現在売上：<input id="sales3"><br>
-目標売上：<input id="target3"><br>
-<button onclick="calc3()">計算</button>
-<div id="r3"></div>
-</div>
-
-<script>
-function calc3(){
-let s=document.getElementById("sales3").value;
-let t=document.getElementById("target3").value;
-document.getElementById("r3").innerText="不足額："+(t-s)+"円";
-}
-</script>
-
-  <div class="calc">
-<h2>人件費率計算</h2>
-<p class="desc">
-売上に対する人件費の割合を計算します。
-人件費率が高すぎる場合、利益が圧迫される可能性があります。
-業種にもよりますが、適正水準を超えていないかの目安として活用してください。
-</p>
-売上：<input id="sales4"><br>
-人件費：<input id="labor4"><br>
-<button onclick="calc4()">計算</button>
-<div id="r4"></div>
-</div>
-
-<script>
-function calc4(){
-let s=document.getElementById("sales4").value;
-let l=document.getElementById("labor4").value;
-let r=(l/s)*100;
-document.getElementById("r4").innerText="人件費率："+r.toFixed(1)+"%";
-}
-</script>
-
-  <div class="calc">
-<h2>値上げ利益シミュレーター</h2>
-<p class="desc">
-値上げは売上を増やさずに利益を改善できる最も効果的な手段の一つです。
-この計算機では、現在の売上と値上げ率から、どれだけ利益が増加するかを簡単に確認できます。
-わずかな値上げでも利益に大きく影響するケースが多いため、
-価格見直しの判断材料として活用してください。
-</p>
-売上：<input id="sales5"><br>
-値上げ率(%)：<input id="rate5"><br>
-<button onclick="calc5()">計算</button>
-<div id="r5"></div>
-</div>
-
-<script>
-function calc5(){
-let s=document.getElementById("sales5").value;
-let r=document.getElementById("rate5").value/100;
-let newSales=s*(1+r);
-document.getElementById("r5").innerText="値上げ後売上："+Math.round(newSales)+"円";
-}
-</script>
-
-<!-- 3 -->
 <div class="calc" id="loan">
   <h2>借入返済シミュレーター</h2>
-  <p class="desc"><p class="desc">
-借入額・金利・返済期間から、毎月の返済額と総返済額を計算できます。
-借入は資金繰りを助ける一方で、返済負担が経営を圧迫することもあります。
-無理のない返済計画を立てるための目安として活用してください。
-</p></p>
+  <p class="desc">
+    借入額・金利・返済期間から、毎月の返済額と総返済額を計算できます。
+    借入は資金繰りを助ける一方で、返済負担が経営を圧迫することもあります。
+    無理のない返済計画を立てるための目安として活用してください。
+  </p>
   <div class="form">
     <label>借入額（円）<input type="number" id="loanAmount" placeholder="例：10000000"></label>
     <label>年利（%）<input type="number" id="loanRate" placeholder="例：2.0" step="0.1"></label>
@@ -265,14 +182,13 @@ document.getElementById("r5").innerText="値上げ後売上："+Math.round(newSa
   <div class="result" id="loanResult">結果がここに表示されます</div>
 </div>
 
-<!-- 4 -->
 <div class="calc" id="cashRunway">
   <h2>資金寿命計算機</h2>
-  <p class="desc"><p class="desc">
-現在の現預金と毎月の赤字額から、会社があと何ヶ月持つかを計算します。
-資金繰りは突然悪化することが多く、早めの把握が重要です。
-この数値を基準に、コスト削減や資金調達の判断に役立ててください。
-</p></p>
+  <p class="desc">
+    現在の現預金と毎月の赤字額から、会社があと何ヶ月持つかを計算します。
+    資金繰りは突然悪化することが多く、早めの把握が重要です。
+    この数値を基準に、コスト削減や資金調達の判断に役立ててください。
+  </p>
   <div class="form">
     <label>現預金残高（円）<input type="number" id="cashBalance" placeholder="例：5000000"></label>
     <label>毎月の赤字額（円）<input type="number" id="monthlyLoss" placeholder="例：800000"></label>
@@ -281,14 +197,13 @@ document.getElementById("r5").innerText="値上げ後売上："+Math.round(newSa
   <div class="result" id="cashResult">結果がここに表示されます</div>
 </div>
 
-<!-- 5 -->
 <div class="calc" id="laborRate">
   <h2>人件費率計算機</h2>
-  <p class="desc"><p class="desc">
-売上に対する人件費の割合を計算します。
-人件費率が高すぎる場合、利益が圧迫される可能性があります。
-業種にもよりますが、適正水準を超えていないかの目安として活用してください。
-</p></p>
+  <p class="desc">
+    売上に対する人件費の割合を計算します。
+    人件費率が高すぎる場合、利益が圧迫される可能性があります。
+    業種にもよりますが、適正水準を超えていないかの目安として活用してください。
+  </p>
   <div class="form">
     <label>月売上（円）<input type="number" id="lrSales" placeholder="例：5000000"></label>
     <label>月人件費（円）<input type="number" id="lrLabor" placeholder="例：1800000"></label>
@@ -297,14 +212,28 @@ document.getElementById("r5").innerText="値上げ後売上："+Math.round(newSa
   <div class="result" id="lrResult">結果がここに表示されます</div>
 </div>
 
-<!-- 7 -->
+<div class="calc" id="priceUp">
+  <h2>値上げ利益シミュレーター</h2>
+  <p class="desc">
+    値上げは売上を増やさずに利益を改善できる最も効果的な手段の一つです。
+    この計算機では、現在の売上と値上げ率から、どれだけ利益が増加するかを簡単に確認できます。
+    わずかな値上げでも利益に大きく影響するケースが多いため、価格見直しの判断材料として活用してください。
+  </p>
+  <div class="form">
+    <label>現在の月売上（円）<input type="number" id="puSales" placeholder="例：3000000"></label>
+    <label>現在の粗利率（%）<input type="number" id="puMargin" placeholder="例：40"></label>
+    <label>値上げ率（%）<input type="number" id="puRate" placeholder="例：5"></label>
+  </div>
+  <button onclick="calcPriceUp()">計算する</button>
+  <div class="result" id="puResult">結果がここに表示されます</div>
+</div>
+
 <div class="calc" id="neededSales">
   <h2>月商不足額計算機</h2>
-  <p class="desc"><p class="desc">
-現在の売上と目標売上から、不足している売上額を計算します。
-目標達成までのギャップを可視化することで、
-営業活動や価格戦略の改善に役立てることができます。
-</p></p>
+  <p class="desc">
+    現在の売上と目標利益から、必要な売上額と不足している売上額を計算します。
+    目標達成までのギャップを可視化することで、営業活動や価格戦略の改善に役立てることができます。
+  </p>
   <div class="form">
     <label>現在の月売上（円）<input type="number" id="nsCurrent" placeholder="例：3000000"></label>
     <label>月固定費（円）<input type="number" id="nsFixed" placeholder="例：1500000"></label>
@@ -315,14 +244,13 @@ document.getElementById("r5").innerText="値上げ後売上："+Math.round(newSa
   <div class="result" id="nsResult">結果がここに表示されます</div>
 </div>
 
-<!-- 8 -->
 <div class="calc" id="consumptionTax">
   <h2>消費税ざっくり計算</h2>
-  <p class="desc"><p class="desc">
-税込・税抜金額から消費税額を計算します。
-日々の取引や見積もり、請求書作成時の確認に活用できます。
-正確な税額の把握は資金繰りにも影響するため重要です。
-</p></p>
+  <p class="desc">
+    税込・税抜金額から消費税額を計算します。
+    日々の取引や見積もり、請求書作成時の確認に活用できます。
+    正確な税額の把握は資金繰りにも影響するため重要です。
+  </p>
   <div class="form">
     <label>金額（円）<input type="number" id="ctAmount" placeholder="例：110000"></label>
     <label>入力区分
@@ -337,14 +265,12 @@ document.getElementById("r5").innerText="値上げ後売上："+Math.round(newSa
   <div class="result" id="ctResult">結果がここに表示されます</div>
 </div>
 
-<!-- 9 -->
 <div class="calc" id="corporateTax">
   <h2>法人税ざっくり計算</h2>
-  <p class="desc"><p class="desc">
-利益から法人税の概算額を計算します。
-実際の税額は各種控除や条件により変動しますが、
-大まかな負担感を把握するための目安として活用できます。
-</p></p>
+  <p class="desc">
+    利益から法人税等の概算額を計算します。
+    実際の税額は各種控除や条件により変動しますが、大まかな負担感を把握するための目安として活用できます。
+  </p>
   <div class="form">
     <label>税引前利益（円）<input type="number" id="corpProfit" placeholder="例：5000000"></label>
     <label>概算税率（%）<input type="number" id="corpRate" value="30"></label>
@@ -353,10 +279,13 @@ document.getElementById("r5").innerText="値上げ後売上："+Math.round(newSa
   <div class="result" id="corpResult">結果がここに表示されます</div>
 </div>
 
-<!-- 10 -->
 <div class="calc" id="hiring">
   <h2>社員1人雇えるか診断</h2>
-  <p class="desc">年収・社会保険・必要粗利から、採用に必要な売上を計算します。</p>
+  <p class="desc">
+    想定年収・会社負担・粗利率から、社員1人を雇うために必要な売上を計算します。
+    採用は売上拡大の手段ですが、人件費が増えることで利益を圧迫するリスクもあります。
+    採用判断の前に、必要な売上規模を把握することが重要です。
+  </p>
   <div class="form">
     <label>想定年収（円）<input type="number" id="hireSalary" placeholder="例：4000000"></label>
     <label>会社負担率（%）<input type="number" id="hireBurden" value="15"></label>
@@ -365,121 +294,59 @@ document.getElementById("r5").innerText="値上げ後売上："+Math.round(newSa
   <button onclick="calcHiring()">計算する</button>
   <div class="result" id="hireResult">結果がここに表示されます</div>
 </div>
-<div class="calc">
-<h2>源泉徴収ざっくり計算</h2>
-<p class="desc"><p class="desc">
-報酬から源泉所得税を差し引いた手取り額を計算します。
-フリーランスや外注費の支払い時に役立ちます。
-実際の税率は条件によって変わるため、あくまで目安としてご利用ください。
-</p></p>
 
-報酬金額：<input id="g1"><br>
-<button onclick="calcGensen()">計算</button>
-
-<div id="rG1"></div>
+<div class="calc" id="withholding">
+  <h2>源泉徴収ざっくり計算</h2>
+  <p class="desc">
+    報酬から源泉所得税を差し引いた手取り額を計算します。
+    フリーランスや外注費の支払い時に役立ちます。
+    実際の税率は条件によって変わるため、あくまで目安としてご利用ください。
+  </p>
+  <div class="form">
+    <label>報酬金額（円）<input type="number" id="withAmount" placeholder="例：100000"></label>
+    <label>源泉税率（%）<input type="number" id="withRate" value="10.21" step="0.01"></label>
+  </div>
+  <button onclick="calcWithholding()">計算する</button>
+  <div class="result" id="withResult">結果がここに表示されます</div>
 </div>
 
-<script>
-function calcGensen(){
-let amount = document.getElementById("g1").value;
-let tax = amount * 0.1021;
-let net = amount - tax;
-document.getElementById("rG1").innerText =
-"源泉税：" + Math.round(tax) + "円 / 手取り：" + Math.round(net) + "円";
-}
-</script>
-  <div class="calc">
-<h2>年収手取りざっくり計算</h2>
-<p class="desc"><p class="desc">
-年収から税金や社会保険料を差し引いた手取り額の目安を計算します。
-生活設計や収入の見直しを考える際の参考として活用できます。
-</p></p>
-
-年収：<input id="g2"><br>
-<button onclick="calcNet()">計算</button>
-
-<div id="rG2"></div>
+<div class="calc" id="annualNet">
+  <h2>年収手取りざっくり計算</h2>
+  <p class="desc">
+    年収から税金や社会保険料を差し引いた手取り額の目安を計算します。
+    生活設計や収入の見直しを考える際の参考として活用できます。
+    実際の手取り額は扶養、居住地、控除などによって変動します。
+  </p>
+  <div class="form">
+    <label>年収（円）<input type="number" id="annualIncome" placeholder="例：5000000"></label>
+    <label>手取り率（%）<input type="number" id="netRate" value="75"></label>
+  </div>
+  <button onclick="calcAnnualNet()">計算する</button>
+  <div class="result" id="annualNetResult">結果がここに表示されます</div>
 </div>
 
-<script>
-function calcNet(){
-let income = document.getElementById("g2").value;
-let net = income * 0.75;
-document.getElementById("rG2").innerText =
-"手取り目安：" + Math.round(net) + "円";
-}
-</script>
-  <div class="calc">
-<h2>社会保険料ざっくり計算</h2>
-<p class="desc"><p class="desc">
-年収に対する社会保険料の目安を計算します。
-実際の保険料は制度や条件によって異なりますが、
-大まかな負担額を把握するための参考になります。
-</p></p>
-
-年収：<input id="g3"><br>
-<button onclick="calcSocial()">計算</button>
-
-<div id="rG3"></div>
+<div class="calc" id="socialInsurance">
+  <h2>社会保険料ざっくり計算</h2>
+  <p class="desc">
+    年収に対する社会保険料の目安を計算します。
+    実際の保険料は制度や条件によって異なりますが、大まかな負担額を把握するための参考になります。
+  </p>
+  <div class="form">
+    <label>年収（円）<input type="number" id="siIncome" placeholder="例：5000000"></label>
+    <label>社会保険料率（%）<input type="number" id="siRate" value="15"></label>
+  </div>
+  <button onclick="calcSocialInsurance()">計算する</button>
+  <div class="result" id="siResult">結果がここに表示されます</div>
 </div>
-
-<script>
-function calcSocial(){
-let income = document.getElementById("g3").value;
-let social = income * 0.15;
-document.getElementById("rG3").innerText =
-"社会保険料目安：" + Math.round(social) + "円";
-}
-</script>
-  <div class="calc">
-<h2>固定費比率計算</h2>
-<p class="desc">売上に対する固定費の割合を計算します。高いと経営リスクが上がります。</p>
-
-売上：<input id="g4"><br>
-固定費：<input id="g5"><br>
-<button onclick="calcFixed()">計算</button>
-
-<div id="rG4"></div>
-</div>
-
-<script>
-function calcFixed(){
-let s = document.getElementById("g4").value;
-let f = document.getElementById("g5").value;
-let r = (f/s)*100;
-document.getElementById("rG4").innerText =
-"固定費比率：" + r.toFixed(1) + "%";
-}
-</script>
-  <div class="calc">
-<h2>利益率計算</h2>
-<p class="desc">売上と利益から利益率を算出します。収益力の基本指標です。</p>
-
-売上：<input id="g6"><br>
-利益：<input id="g7"><br>
-<button onclick="calcProfit()">計算</button>
-
-<div id="rG5"></div>
-</div>
-
-<script>
-function calcProfit(){
-let s = document.getElementById("g6").value;
-let p = document.getElementById("g7").value;
-let r = (p/s)*100;
-document.getElementById("rG5").innerText =
-"利益率：" + r.toFixed(1) + "%";
-}
-</script>
-  
 
 </section>
 
-<div class="ad">広告枠：会計ソフト / 法人カード / 融資 / ビジネスSaaS系アフィリエイト</div>
-
 <section id="about" class="calc">
   <h2>このサイトについて</h2>
-  <p>社長の計算機は、中小企業の社長・個人事業主・管理部門向けに、経営判断で使える無料計算ツールを提供するサイトです。</p>
+  <p>
+    社長の計算機は、中小企業の社長・個人事業主・管理部門向けに、経営判断で使える無料計算ツールを提供するサイトです。
+    日々の売上、利益、資金繰り、借入、人件費、税金などを簡単に試算できるようにしています。
+  </p>
   <p class="note">本サイトの計算結果は簡易試算です。税務・会計・融資判断などの最終確認は専門家にご相談ください。</p>
 </section>
 
@@ -495,15 +362,31 @@ document.getElementById("rG5").innerText =
 </footer>
 
 <script>
-function yen(n){return Math.round(n).toLocaleString() + "円";}
-function pct(n){return Math.round(n * 10) / 10 + "%";}
-function val(id){return Number(document.getElementById(id).value || 0);}
-function jump(id){document.getElementById(id).scrollIntoView({behavior:"smooth"});}
+function yen(n){
+  if(!isFinite(n)) return "0円";
+  return Math.round(n).toLocaleString() + "円";
+}
+
+function pct(n){
+  if(!isFinite(n)) return "0%";
+  return Math.round(n * 10) / 10 + "%";
+}
+
+function val(id){
+  return Number(document.getElementById(id).value || 0);
+}
+
+function jump(id){
+  const el = document.getElementById(id);
+  if(el) el.scrollIntoView({behavior:"smooth"});
+}
 
 function searchTool(){
   const q = document.getElementById("searchInput").value;
   if(q.includes("損益") || q.includes("黒字")) return jump("breakEven");
   if(q.includes("粗利")) return jump("grossProfit");
+  if(q.includes("利益率")) return jump("profitRate");
+  if(q.includes("固定費")) return jump("fixedRate");
   if(q.includes("借入") || q.includes("返済")) return jump("loan");
   if(q.includes("資金") || q.includes("現預金")) return jump("cashRunway");
   if(q.includes("人件費")) return jump("laborRate");
@@ -512,6 +395,9 @@ function searchTool(){
   if(q.includes("消費税")) return jump("consumptionTax");
   if(q.includes("法人税")) return jump("corporateTax");
   if(q.includes("採用") || q.includes("雇用")) return jump("hiring");
+  if(q.includes("源泉")) return jump("withholding");
+  if(q.includes("手取り")) return jump("annualNet");
+  if(q.includes("社会保険")) return jump("socialInsurance");
   alert("該当ツールが見つかりませんでした。キーワードを変えて検索してください。");
 }
 
@@ -519,27 +405,41 @@ function calcBreakEven(){
   const fixed = val("beFixed");
   const margin = val("beMargin") / 100;
   const profit = val("beProfit");
-  if(!fixed || !margin){return alert("固定費と粗利率を入力してください");}
+  if(!fixed || !margin) return alert("固定費と粗利率を入力してください");
   const sales = (fixed + profit) / margin;
-  document.getElementById("beResult").innerHTML =
-    "必要な月商は <strong>" + yen(sales) + "</strong> です。";
+  document.getElementById("beResult").innerHTML = "必要な月商は <strong>" + yen(sales) + "</strong> です。";
 }
 
 function calcGrossProfit(){
   const sales = val("gpSales");
   const cost = val("gpCost");
-  if(!sales){return alert("売上を入力してください");}
+  if(!sales) return alert("売上を入力してください");
   const gross = sales - cost;
   const rate = gross / sales * 100;
-  document.getElementById("gpResult").innerHTML =
-    "粗利額は <strong>" + yen(gross) + "</strong>、粗利率は <strong>" + pct(rate) + "</strong> です。";
+  document.getElementById("gpResult").innerHTML = "粗利額は <strong>" + yen(gross) + "</strong>、粗利率は <strong>" + pct(rate) + "</strong> です。";
+}
+
+function calcProfitRate(){
+  const sales = val("profitSales");
+  const profit = val("profitAmount");
+  if(!sales) return alert("売上を入力してください");
+  const rate = profit / sales * 100;
+  document.getElementById("profitResult").innerHTML = "利益率は <strong>" + pct(rate) + "</strong> です。";
+}
+
+function calcFixedRate(){
+  const sales = val("fixedSales");
+  const fixed = val("fixedCost");
+  if(!sales) return alert("売上を入力してください");
+  const rate = fixed / sales * 100;
+  document.getElementById("fixedResult").innerHTML = "固定費比率は <strong>" + pct(rate) + "</strong> です。";
 }
 
 function calcLoan(){
   const principal = val("loanAmount");
   const annualRate = val("loanRate") / 100;
   const years = val("loanYears");
-  if(!principal || !years){return alert("借入額と返済期間を入力してください");}
+  if(!principal || !years) return alert("借入額と返済期間を入力してください");
   const months = years * 12;
   const monthlyRate = annualRate / 12;
   let monthly;
@@ -549,39 +449,36 @@ function calcLoan(){
     monthly = principal * monthlyRate * Math.pow(1 + monthlyRate, months) / (Math.pow(1 + monthlyRate, months) - 1);
   }
   const total = monthly * months;
-  document.getElementById("loanResult").innerHTML =
-    "毎月返済額は <strong>" + yen(monthly) + "</strong>、総返済額は <strong>" + yen(total) + "</strong> です。";
+  document.getElementById("loanResult").innerHTML = "毎月返済額は <strong>" + yen(monthly) + "</strong>、総返済額は <strong>" + yen(total) + "</strong> です。";
 }
 
 function calcCashRunway(){
   const cash = val("cashBalance");
   const loss = val("monthlyLoss");
-  if(!cash || !loss){return alert("現預金と毎月の赤字額を入力してください");}
+  if(!cash || !loss) return alert("現預金と毎月の赤字額を入力してください");
   const months = cash / loss;
-  document.getElementById("cashResult").innerHTML =
-    "資金寿命は約 <strong>" + (Math.round(months * 10) / 10) + "ヶ月</strong> です。";
+  document.getElementById("cashResult").innerHTML = "資金寿命は約 <strong>" + (Math.round(months * 10) / 10) + "ヶ月</strong> です。";
 }
 
 function calcLaborRate(){
   const sales = val("lrSales");
   const labor = val("lrLabor");
-  if(!sales){return alert("月売上を入力してください");}
+  if(!sales) return alert("月売上を入力してください");
   const rate = labor / sales * 100;
-  document.getElementById("lrResult").innerHTML =
-    "人件費率は <strong>" + pct(rate) + "</strong> です。";
+  document.getElementById("lrResult").innerHTML = "人件費率は <strong>" + pct(rate) + "</strong> です。";
 }
 
 function calcPriceUp(){
   const sales = val("puSales");
   const margin = val("puMargin") / 100;
   const up = val("puRate") / 100;
-  if(!sales || !margin || !up){return alert("必要項目を入力してください");}
+  if(!sales || !margin || !up) return alert("必要項目を入力してください");
   const currentGross = sales * margin;
   const newSales = sales * (1 + up);
   const increased = newSales - sales;
   const newGross = currentGross + increased;
   document.getElementById("puResult").innerHTML =
-    "値上げ後の売上は <strong>" + yen(newSales) + "</strong>。利益増加額は約 <strong>" + yen(increased) + "</strong> です。";
+    "値上げ後の売上は <strong>" + yen(newSales) + "</strong>。利益増加額は約 <strong>" + yen(increased) + "</strong>、値上げ後の粗利目安は <strong>" + yen(newGross) + "</strong> です。";
 }
 
 function calcNeededSales(){
@@ -589,7 +486,7 @@ function calcNeededSales(){
   const fixed = val("nsFixed");
   const margin = val("nsMargin") / 100;
   const target = val("nsTarget");
-  if(!current || !fixed || !margin){return alert("必要項目を入力してください");}
+  if(!current || !fixed || !margin) return alert("必要項目を入力してください");
   const needed = (fixed + target) / margin;
   const shortage = needed - current;
   document.getElementById("nsResult").innerHTML =
@@ -600,7 +497,7 @@ function calcConsumptionTax(){
   const amount = val("ctAmount");
   const rate = val("ctRate") / 100;
   const type = document.getElementById("ctType").value;
-  if(!amount || !rate){return alert("金額と税率を入力してください");}
+  if(!amount || !rate) return alert("金額と税率を入力してください");
   let taxExcluded, tax, taxIncluded;
   if(type === "taxIncluded"){
     taxIncluded = amount;
@@ -618,7 +515,7 @@ function calcConsumptionTax(){
 function calcCorporateTax(){
   const profit = val("corpProfit");
   const rate = val("corpRate") / 100;
-  if(!profit || !rate){return alert("利益と税率を入力してください");}
+  if(!profit || !rate) return alert("利益と税率を入力してください");
   const tax = profit * rate;
   const after = profit - tax;
   document.getElementById("corpResult").innerHTML =
@@ -629,11 +526,39 @@ function calcHiring(){
   const salary = val("hireSalary");
   const burden = val("hireBurden") / 100;
   const margin = val("hireMargin") / 100;
-  if(!salary || !margin){return alert("年収と粗利率を入力してください");}
+  if(!salary || !margin) return alert("年収と粗利率を入力してください");
   const totalCost = salary * (1 + burden);
   const neededSales = totalCost / margin;
   document.getElementById("hireResult").innerHTML =
     "年間の実質人件費は約 <strong>" + yen(totalCost) + "</strong>。この採用を支えるために必要な年間売上は約 <strong>" + yen(neededSales) + "</strong> です。";
+}
+
+function calcWithholding(){
+  const amount = val("withAmount");
+  const rate = val("withRate") / 100;
+  if(!amount || !rate) return alert("報酬金額と税率を入力してください");
+  const tax = amount * rate;
+  const net = amount - tax;
+  document.getElementById("withResult").innerHTML =
+    "源泉税は <strong>" + yen(tax) + "</strong>、手取り額は <strong>" + yen(net) + "</strong> です。";
+}
+
+function calcAnnualNet(){
+  const income = val("annualIncome");
+  const rate = val("netRate") / 100;
+  if(!income || !rate) return alert("年収と手取り率を入力してください");
+  const net = income * rate;
+  document.getElementById("annualNetResult").innerHTML =
+    "手取り目安は <strong>" + yen(net) + "</strong> です。";
+}
+
+function calcSocialInsurance(){
+  const income = val("siIncome");
+  const rate = val("siRate") / 100;
+  if(!income || !rate) return alert("年収と社会保険料率を入力してください");
+  const social = income * rate;
+  document.getElementById("siResult").innerHTML =
+    "社会保険料の目安は <strong>" + yen(social) + "</strong> です。";
 }
 </script>
 
