@@ -162,6 +162,11 @@ document.getElementById("r1").innerText="利益率："+r.toFixed(1)+"%";
 
   <div class="calc">
 <h2>固定費比率計算</h2>
+<p class="desc">
+売上に対する固定費の割合を計算します。
+固定費が高いと売上減少時に利益が出にくくなります。
+安全な経営を維持するために、固定費の水準を把握することが重要です。
+</p>
 売上：<input id="sales2"><br>
 固定費：<input id="fixed2"><br>
 <button onclick="calc2()">計算</button>
@@ -179,6 +184,11 @@ document.getElementById("r2").innerText="固定費比率："+r.toFixed(1)+"%";
 
   <div class="calc">
 <h2>月商不足額計算</h2>
+<p class="desc">
+現在の売上と目標売上から、不足している売上額を計算します。
+目標達成までのギャップを可視化することで、
+営業活動や価格戦略の改善に役立てることができます。
+</p>
 現在売上：<input id="sales3"><br>
 目標売上：<input id="target3"><br>
 <button onclick="calc3()">計算</button>
@@ -195,6 +205,11 @@ document.getElementById("r3").innerText="不足額："+(t-s)+"円";
 
   <div class="calc">
 <h2>人件費率計算</h2>
+<p class="desc">
+売上に対する人件費の割合を計算します。
+人件費率が高すぎる場合、利益が圧迫される可能性があります。
+業種にもよりますが、適正水準を超えていないかの目安として活用してください。
+</p>
 売上：<input id="sales4"><br>
 人件費：<input id="labor4"><br>
 <button onclick="calc4()">計算</button>
