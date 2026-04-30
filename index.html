@@ -316,6 +316,102 @@ document.getElementById("r5").innerText="値上げ後売上："+Math.round(newSa
   <button onclick="calcHiring()">計算する</button>
   <div class="result" id="hireResult">結果がここに表示されます</div>
 </div>
+<div class="calc">
+<h2>源泉徴収ざっくり計算</h2>
+<p class="desc">報酬から源泉所得税（10.21%）を差し引いた手取り額を計算します。</p>
+
+報酬金額：<input id="g1"><br>
+<button onclick="calcGensen()">計算</button>
+
+<div id="rG1"></div>
+</div>
+
+<script>
+function calcGensen(){
+let amount = document.getElementById("g1").value;
+let tax = amount * 0.1021;
+let net = amount - tax;
+document.getElementById("rG1").innerText =
+"源泉税：" + Math.round(tax) + "円 / 手取り：" + Math.round(net) + "円";
+}
+</script>
+  <div class="calc">
+<h2>年収手取りざっくり計算</h2>
+<p class="desc">年収から税金・社会保険を簡易的に引いた手取りを計算します。</p>
+
+年収：<input id="g2"><br>
+<button onclick="calcNet()">計算</button>
+
+<div id="rG2"></div>
+</div>
+
+<script>
+function calcNet(){
+let income = document.getElementById("g2").value;
+let net = income * 0.75;
+document.getElementById("rG2").innerText =
+"手取り目安：" + Math.round(net) + "円";
+}
+</script>
+  <div class="calc">
+<h2>社会保険料ざっくり計算</h2>
+<p class="desc">年収の約15%として社会保険料の目安を計算します。</p>
+
+年収：<input id="g3"><br>
+<button onclick="calcSocial()">計算</button>
+
+<div id="rG3"></div>
+</div>
+
+<script>
+function calcSocial(){
+let income = document.getElementById("g3").value;
+let social = income * 0.15;
+document.getElementById("rG3").innerText =
+"社会保険料目安：" + Math.round(social) + "円";
+}
+</script>
+  <div class="calc">
+<h2>固定費比率計算</h2>
+<p class="desc">売上に対する固定費の割合を計算します。高いと経営リスクが上がります。</p>
+
+売上：<input id="g4"><br>
+固定費：<input id="g5"><br>
+<button onclick="calcFixed()">計算</button>
+
+<div id="rG4"></div>
+</div>
+
+<script>
+function calcFixed(){
+let s = document.getElementById("g4").value;
+let f = document.getElementById("g5").value;
+let r = (f/s)*100;
+document.getElementById("rG4").innerText =
+"固定費比率：" + r.toFixed(1) + "%";
+}
+</script>
+  <div class="calc">
+<h2>利益率計算</h2>
+<p class="desc">売上と利益から利益率を算出します。収益力の基本指標です。</p>
+
+売上：<input id="g6"><br>
+利益：<input id="g7"><br>
+<button onclick="calcProfit()">計算</button>
+
+<div id="rG5"></div>
+</div>
+
+<script>
+function calcProfit(){
+let s = document.getElementById("g6").value;
+let p = document.getElementById("g7").value;
+let r = (p/s)*100;
+document.getElementById("rG5").innerText =
+"利益率：" + r.toFixed(1) + "%";
+}
+</script>
+  
 
 </section>
 
