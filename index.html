@@ -126,6 +126,89 @@ footer{text-align:center;color:#64748b;font-size:13px;padding:36px 20px}
   <button onclick="calcGrossProfit()">計算する</button>
   <div class="result" id="gpResult">結果がここに表示されます</div>
 </div>
+  <div class="calc">
+<h2>利益率計算機</h2>
+売上：<input id="sales1"><br>
+利益：<input id="profit1"><br>
+<button onclick="calc1()">計算</button>
+<div id="r1"></div>
+</div>
+
+<script>
+function calc1(){
+let s=document.getElementById("sales1").value;
+let p=document.getElementById("profit1").value;
+let r=(p/s)*100;
+document.getElementById("r1").innerText="利益率："+r.toFixed(1)+"%";
+}
+</script>
+
+  <div class="calc">
+<h2>固定費比率計算</h2>
+売上：<input id="sales2"><br>
+固定費：<input id="fixed2"><br>
+<button onclick="calc2()">計算</button>
+<div id="r2"></div>
+</div>
+
+<script>
+function calc2(){
+let s=document.getElementById("sales2").value;
+let f=document.getElementById("fixed2").value;
+let r=(f/s)*100;
+document.getElementById("r2").innerText="固定費比率："+r.toFixed(1)+"%";
+}
+</script>
+
+  <div class="calc">
+<h2>月商不足額計算</h2>
+現在売上：<input id="sales3"><br>
+目標売上：<input id="target3"><br>
+<button onclick="calc3()">計算</button>
+<div id="r3"></div>
+</div>
+
+<script>
+function calc3(){
+let s=document.getElementById("sales3").value;
+let t=document.getElementById("target3").value;
+document.getElementById("r3").innerText="不足額："+(t-s)+"円";
+}
+</script>
+
+  <div class="calc">
+<h2>人件費率計算</h2>
+売上：<input id="sales4"><br>
+人件費：<input id="labor4"><br>
+<button onclick="calc4()">計算</button>
+<div id="r4"></div>
+</div>
+
+<script>
+function calc4(){
+let s=document.getElementById("sales4").value;
+let l=document.getElementById("labor4").value;
+let r=(l/s)*100;
+document.getElementById("r4").innerText="人件費率："+r.toFixed(1)+"%";
+}
+</script>
+
+  <div class="calc">
+<h2>値上げ利益シミュレーター</h2>
+売上：<input id="sales5"><br>
+値上げ率(%)：<input id="rate5"><br>
+<button onclick="calc5()">計算</button>
+<div id="r5"></div>
+</div>
+
+<script>
+function calc5(){
+let s=document.getElementById("sales5").value;
+let r=document.getElementById("rate5").value/100;
+let newSales=s*(1+r);
+document.getElementById("r5").innerText="値上げ後売上："+Math.round(newSales)+"円";
+}
+</script>
 
 <!-- 3 -->
 <div class="calc" id="loan">
