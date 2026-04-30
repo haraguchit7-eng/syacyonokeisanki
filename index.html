@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>社長の計算機｜経営判断に使える無料計算ツール集</title>
+<meta name="description" content="損益分岐点、粗利率、借入返済、資金繰り、人件費率、消費税、法人税、値上げ利益など、中小企業社長向けの無料計算ツール集。">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;background:#f6f8fb;color:#111827;line-height:1.7}
+header{background:#0f172a;color:white;padding:18px 20px;position:sticky;top:0;z-index:10}
+.header-inner{max-width:1180px;margin:auto;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;font-size:22px}
+nav a{color:white;text-decoration:none;margin-left:16px;font-size:14px;opacity:.9}
+.hero{background:linear-gradient(135deg,#0f172a,#1d4ed8);color:white;text-align:center;padding:72px 20px}
+.hero h1{font-size:42px;margin:0 0 16px;line-height:1.25}
+.hero p{max-width:760px;margin:0 auto 28px;font-size:18px;opacity:.95}
+.search{max-width:620px;margin:0 auto;background:white;padding:10px;border-radius:14px;display:flex;box-shadow:0 18px 40px rgba(0,0,0,.22)}
+.search input{flex:1;border:0;padding:14px;font-size:16px;outline:none}
+.search button{border:0;background:#2563eb;color:white;font-weight:700;border-radius:10px;padding:0 22px;cursor:pointer}
+.container{max-width:1180px;margin:auto;padding:42px 20px}
+.section-title{font-size:28px;margin:0 0 8px}
+.lead{color:#64748b;margin:0 0 24px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:white;border:1px solid #e5e7eb;border-radius:18px;padding:22px;box-shadow:0 8px 24px rgba(15,23,42,.06)}
+.card h3{margin:0 0 8px;font-size:19px}
+.card p{color:#64748b;font-size:14px;margin:0 0 14px}
+.card button,.calc button{background:#2563eb;color:white;border:0;border-radius:10px;padding:11px 16px;font-weight:700;cursor:pointer}
+.calc{background:white;border:1px solid #e5e7eb;border-radius:20px;margin:28px 0;padding:26px;box-shadow:0 8px 24px rgba(15,23,42,.06)}
+.calc h2{margin:0 0 8px;font-size:25px}
+.calc .desc{color:#64748b;margin:0 0 18px}
+.form{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0}
+label{font-weight:700;font-size:14px}
+input,select{width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:10px;font-size:16px;margin-top:6px}
+.result{background:#f8fafc;border-left:5px solid #2563eb;padding:16px;border-radius:12px;margin-top:16px;font-weight:700}
+.note{font-size:13px;color:#64748b;margin-top:12px}
+.ad{background:#eef2ff;border:1px dashed #6366f1;color:#3730a3;text-align:center;padding:18px;border-radius:14px;margin:24px 0;font-weight:700}
+footer{text-align:center;color:#64748b;font-size:13px;padding:36px 20px}
+.badge{display:inline-block;background:#e0f2fe;color:#0369a1;border-radius:999px;padding:4px 10px;font-size:12px;font-weight:700;margin-bottom:10px}
+@media(max-width:850px){
+  .grid,.form{grid-template-columns:1fr}
+  nav{display:none}
+  .hero h1{font-size:30px}
+  .search{flex-direction:column}
+  .search button{padding:14px;margin-top:8px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">社長の計算機</div>
+    <nav>
+      <a href="#popular">人気ツール</a>
+      <a href="#tools">計算ツール</a>
+      <a href="#about">このサイトについて</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>社長の悩みは、<br>数字で解決できる。</h1>
+  <p>損益分岐点、借入返済、資金繰り、人件費、税金、値上げまで。中小企業の経営判断に使える無料計算ツール集。</p>
+  <div class="search">
+    <input id="searchInput" placeholder="例：損益分岐点、借入、粗利率、人件費、消費税">
+    <button onclick="searchTool()">探す</button>
+  </div>
+</section>
+
+<main class="container">
+
+<section id="popular">
+  <h2 class="section-title">よく使われる計算ツール</h2>
+  <p class="lead">まずは経営者が日常的に使いやすいツールから。</p>
+
+  <div class="grid">
+    <div class="card">
+      <span class="badge">利益</span>
+      <h3>損益分岐点計算機</h3>
+      <p>固定費と粗利率から、黒字化に必要な売上を計算します。</p>
+      <button onclick="jump('breakEven')">使う</button>
+    </div>
+    <div class="card">
+      <span class="badge">資金繰り</span>
+      <h3>借入返済シミュレーター</h3>
+      <p>借入額・金利・期間から毎月返済額を計算します。</p>
+      <button onclick="jump('loan')">使う</button>
+    </div>
+    <div class="card">
+      <span class="badge">危険度</span>
+      <h3>資金寿命計算機</h3>
+      <p>今の現預金であと何ヶ月もつかを計算します。</p>
+      <button onclick="jump('cashRunway')">使う</button>
+    </div>
+  </div>
+</section>
+
+<div class="ad">広告枠：Google AdSense / アフィリエイト広告をここに配置</div>
+
+<section id="tools">
+
+<!-- 1 -->
+<div class="calc" id="breakEven">
+  <h2>損益分岐点計算機</h2>
+  <p class="desc">固定費と粗利率から、黒字化に必要な月商を計算します。</p>
+  <div class="form">
+    <label>月固定費（円）<input type="number" id="beFixed" placeholder="例：1200000"></label>
+    <label>粗利率（%）<input type="number" id="beMargin" placeholder="例：40"></label>
+    <label>目標利益（円）<input type="number" id="beProfit" placeholder="例：300000"></label>
+  </div>
+  <button onclick="calcBreakEven()">計算する</button>
+  <div class="result" id="beResult">結果がここに表示されます</div>
+  <p class="note">計算式：必要売上 =（固定費 + 目標利益）÷ 粗利率</p>
+</div>
+
+<!-- 2 -->
+<div class="calc" id="grossProfit">
+  <h2>粗利率計算機</h2>
+  <p class="desc">売上と原価から粗利額・粗利率を計算します。</p>
+  <div class="form">
+    <label>売上（円）<input type="number" id="gpSales" placeholder="例：3000000"></label>
+    <label>原価（円）<input type="number" id="gpCost" placeholder="例：1800000"></label>
+  </div>
+  <button onclick="calcGrossProfit()">計算する</button>
+  <div class="result" id="gpResult">結果がここに表示されます</div>
+</div>
+
+<!-- 3 -->
+<div class="calc" id="loan">
+  <h2>借入返済シミュレーター</h2>
+  <p class="desc">借入額・年利・返済期間から、毎月返済額を計算します。</p>
+  <div class="form">
+    <label>借入額（円）<input type="number" id="loanAmount" placeholder="例：10000000"></label>
+    <label>年利（%）<input type="number" id="loanRate" placeholder="例：2.0" step="0.1"></label>
+    <label>返済期間（年）<input type="number" id="loanYears" placeholder="例：7"></label>
+  </div>
+  <button onclick="calcLoan()">計算する</button>
+  <div class="result" id="loanResult">結果がここに表示されます</div>
+</div>
+
+<!-- 4 -->
+<div class="calc" id="cashRunway">
+  <h2>資金寿命計算機</h2>
+  <p class="desc">今の現預金で、あと何ヶ月会社がもつかを計算します。</p>
+  <div class="form">
+    <label>現預金残高（円）<input type="number" id="cashBalance" placeholder="例：5000000"></label>
+    <label>毎月の赤字額（円）<input type="number" id="monthlyLoss" placeholder="例：800000"></label>
+  </div>
+  <button onclick="calcCashRunway()">計算する</button>
+  <div class="result" id="cashResult">結果がここに表示されます</div>
+</div>
+
+<!-- 5 -->
+<div class="calc" id="laborRate">
+  <h2>人件費率計算機</h2>
+  <p class="desc">売上に対する人件費の割合を計算します。</p>
+  <div class="form">
+    <label>月売上（円）<input type="number" id="lrSales" placeholder="例：5000000"></label>
+    <label>月人件費（円）<input type="number" id="lrLabor" placeholder="例：1800000"></label>
+  </div>
+  <button onclick="calcLaborRate()">計算する</button>
+  <div class="result" id="lrResult">結果がここに表示されます</div>
+</div>
+
+<!-- 6 -->
+<div class="calc" id="priceUp">
+  <h2>値上げ利益シミュレーター</h2>
+  <p class="desc">値上げによって利益がどれだけ増えるかを計算します。</p>
+  <div class="form">
+    <label>現在の月売上（円）<input type="number" id="puSales" placeholder="例：3000000"></label>
+    <label>現在の粗利率（%）<input type="number" id="puMargin" placeholder="例：40"></label>
+    <label>値上げ率（%）<input type="number" id="puRate" placeholder="例：5"></label>
+  </div>
+  <button onclick="calcPriceUp()">計算する</button>
+  <div class="result" id="puResult">結果がここに表示されます</div>
+</div>
+
+<!-- 7 -->
+<div class="calc" id="neededSales">
+  <h2>月商不足額計算機</h2>
+  <p class="desc">目標利益を達成するために、あといくら売上が必要か計算します。</p>
+  <div class="form">
+    <label>現在の月売上（円）<input type="number" id="nsCurrent" placeholder="例：3000000"></label>
+    <label>月固定費（円）<input type="number" id="nsFixed" placeholder="例：1500000"></label>
+    <label>粗利率（%）<input type="number" id="nsMargin" placeholder="例：40"></label>
+    <label>目標利益（円）<input type="number" id="nsTarget" placeholder="例：500000"></label>
+  </div>
+  <button onclick="calcNeededSales()">計算する</button>
+  <div class="result" id="nsResult">結果がここに表示されます</div>
+</div>
+
+<!-- 8 -->
+<div class="calc" id="consumptionTax">
+  <h2>消費税ざっくり計算</h2>
+  <p class="desc">税込・税抜金額から消費税額を計算します。</p>
+  <div class="form">
+    <label>金額（円）<input type="number" id="ctAmount" placeholder="例：110000"></label>
+    <label>入力区分
+      <select id="ctType">
+        <option value="taxIncluded">税込</option>
+        <option value="taxExcluded">税抜</option>
+      </select>
+    </label>
+    <label>税率（%）<input type="number" id="ctRate" value="10"></label>
+  </div>
+  <button onclick="calcConsumptionTax()">計算する</button>
+  <div class="result" id="ctResult">結果がここに表示されます</div>
+</div>
+
+<!-- 9 -->
+<div class="calc" id="corporateTax">
+  <h2>法人税ざっくり計算</h2>
+  <p class="desc">利益から法人税等の概算額を計算します。実際の税額は専門家に確認してください。</p>
+  <div class="form">
+    <label>税引前利益（円）<input type="number" id="corpProfit" placeholder="例：5000000"></label>
+    <label>概算税率（%）<input type="number" id="corpRate" value="30"></label>
+  </div>
+  <button onclick="calcCorporateTax()">計算する</button>
+  <div class="result" id="corpResult">結果がここに表示されます</div>
+</div>
+
+<!-- 10 -->
+<div class="calc" id="hiring">
+  <h2>社員1人雇えるか診断</h2>
+  <p class="desc">年収・社会保険・必要粗利から、採用に必要な売上を計算します。</p>
+  <div class="form">
+    <label>想定年収（円）<input type="number" id="hireSalary" placeholder="例：4000000"></label>
+    <label>会社負担率（%）<input type="number" id="hireBurden" value="15"></label>
+    <label>粗利率（%）<input type="number" id="hireMargin" placeholder="例：40"></label>
+  </div>
+  <button onclick="calcHiring()">計算する</button>
+  <div class="result" id="hireResult">結果がここに表示されます</div>
+</div>
+
+</section>
+
+<div class="ad">広告枠：会計ソフト / 法人カード / 融資 / ビジネスSaaS系アフィリエイト</div>
+
+<section id="about" class="calc">
+  <h2>このサイトについて</h2>
+  <p>社長の計算機は、中小企業の社長・個人事業主・管理部門向けに、経営判断で使える無料計算ツールを提供するサイトです。</p>
+  <p class="note">本サイトの計算結果は簡易試算です。税務・会計・融資判断などの最終確認は専門家にご相談ください。</p>
+</section>
+
+</main>
+
+<footer>
+  <p>© 社長の計算機</p>
+  <p><a href="#" onclick="alert('プライバシーポリシーページは後で作成してください')">プライバシーポリシー</a> / <a href="#" onclick="alert('お問い合わせページは後で作成してください')">お問い合わせ</a></p>
+</footer>
+
+<script>
+function yen(n){return Math.round(n).toLocaleString() + "円";}
+function pct(n){return Math.round(n * 10) / 10 + "%";}
+function val(id){return Number(document.getElementById(id).value || 0);}
+function jump(id){document.getElementById(id).scrollIntoView({behavior:"smooth"});}
+
+function searchTool(){
+  const q = document.getElementById("searchInput").value;
+  if(q.includes("損益") || q.includes("黒字")) return jump("breakEven");
+  if(q.includes("粗利")) return jump("grossProfit");
+  if(q.includes("借入") || q.includes("返済")) return jump("loan");
+  if(q.includes("資金") || q.includes("現預金")) return jump("cashRunway");
+  if(q.includes("人件費")) return jump("laborRate");
+  if(q.includes("値上げ")) return jump("priceUp");
+  if(q.includes("月商") || q.includes("売上")) return jump("neededSales");
+  if(q.includes("消費税")) return jump("consumptionTax");
+  if(q.includes("法人税")) return jump("corporateTax");
+  if(q.includes("採用") || q.includes("雇用")) return jump("hiring");
+  alert("該当ツールが見つかりませんでした。キーワードを変えて検索してください。");
+}
+
+function calcBreakEven(){
+  const fixed = val("beFixed");
+  const margin = val("beMargin") / 100;
+  const profit = val("beProfit");
+  if(!fixed || !margin){return alert("固定費と粗利率を入力してください");}
+  const sales = (fixed + profit) / margin;
+  document.getElementById("beResult").innerHTML =
+    "必要な月商は <strong>" + yen(sales) + "</strong> です。";
+}
+
+function calcGrossProfit(){
+  const sales = val("gpSales");
+  const cost = val("gpCost");
+  if(!sales){return alert("売上を入力してください");}
+  const gross = sales - cost;
+  const rate = gross / sales * 100;
+  document.getElementById("gpResult").innerHTML =
+    "粗利額は <strong>" + yen(gross) + "</strong>、粗利率は <strong>" + pct(rate) + "</strong> です。";
+}
+
+function calcLoan(){
+  const principal = val("loanAmount");
+  const annualRate = val("loanRate") / 100;
+  const years = val("loanYears");
+  if(!principal || !years){return alert("借入額と返済期間を入力してください");}
+  const months = years * 12;
+  const monthlyRate = annualRate / 12;
+  let monthly;
+  if(monthlyRate === 0){
+    monthly = principal / months;
+  } else {
+    monthly = principal * monthlyRate * Math.pow(1 + monthlyRate, months) / (Math.pow(1 + monthlyRate, months) - 1);
+  }
+  const total = monthly * months;
+  document.getElementById("loanResult").innerHTML =
+    "毎月返済額は <strong>" + yen(monthly) + "</strong>、総返済額は <strong>" + yen(total) + "</strong> です。";
+}
+
+function calcCashRunway(){
+  const cash = val("cashBalance");
+  const loss = val("monthlyLoss");
+  if(!cash || !loss){return alert("現預金と毎月の赤字額を入力してください");}
+  const months = cash / loss;
+  document.getElementById("cashResult").innerHTML =
+    "資金寿命は約 <strong>" + (Math.round(months * 10) / 10) + "ヶ月</strong> です。";
+}
+
+function calcLaborRate(){
+  const sales = val("lrSales");
+  const labor = val("lrLabor");
+  if(!sales){return alert("月売上を入力してください");}
+  const rate = labor / sales * 100;
+  document.getElementById("lrResult").innerHTML =
+    "人件費率は <strong>" + pct(rate) + "</strong> です。";
+}
+
+function calcPriceUp(){
+  const sales = val("puSales");
+  const margin = val("puMargin") / 100;
+  const up = val("puRate") / 100;
+  if(!sales || !margin || !up){return alert("必要項目を入力してください");}
+  const currentGross = sales * margin;
+  const newSales = sales * (1 + up);
+  const increased = newSales - sales;
+  const newGross = currentGross + increased;
+  document.getElementById("puResult").innerHTML =
+    "値上げ後の売上は <strong>" + yen(newSales) + "</strong>。利益増加額は約 <strong>" + yen(increased) + "</strong> です。";
+}
+
+function calcNeededSales(){
+  const current = val("nsCurrent");
+  const fixed = val("nsFixed");
+  const margin = val("nsMargin") / 100;
+  const target = val("nsTarget");
+  if(!current || !fixed || !margin){return alert("必要項目を入力してください");}
+  const needed = (fixed + target) / margin;
+  const shortage = needed - current;
+  document.getElementById("nsResult").innerHTML =
+    "目標達成に必要な月商は <strong>" + yen(needed) + "</strong>。現在との差額は <strong>" + yen(shortage) + "</strong> です。";
+}
+
+function calcConsumptionTax(){
+  const amount = val("ctAmount");
+  const rate = val("ctRate") / 100;
+  const type = document.getElementById("ctType").value;
+  if(!amount || !rate){return alert("金額と税率を入力してください");}
+  let taxExcluded, tax, taxIncluded;
+  if(type === "taxIncluded"){
+    taxIncluded = amount;
+    taxExcluded = amount / (1 + rate);
+    tax = taxIncluded - taxExcluded;
+  } else {
+    taxExcluded = amount;
+    tax = amount * rate;
+    taxIncluded = amount + tax;
+  }
+  document.getElementById("ctResult").innerHTML =
+    "税抜価格は <strong>" + yen(taxExcluded) + "</strong>、消費税は <strong>" + yen(tax) + "</strong>、税込価格は <strong>" + yen(taxIncluded) + "</strong> です。";
+}
+
+function calcCorporateTax(){
+  const profit = val("corpProfit");
+  const rate = val("corpRate") / 100;
+  if(!profit || !rate){return alert("利益と税率を入力してください");}
+  const tax = profit * rate;
+  const after = profit - tax;
+  document.getElementById("corpResult").innerHTML =
+    "概算税額は <strong>" + yen(tax) + "</strong>、税引後利益は <strong>" + yen(after) + "</strong> です。";
+}
+
+function calcHiring(){
+  const salary = val("hireSalary");
+  const burden = val("hireBurden") / 100;
+  const margin = val("hireMargin") / 100;
+  if(!salary || !margin){return alert("年収と粗利率を入力してください");}
+  const totalCost = salary * (1 + burden);
+  const neededSales = totalCost / margin;
+  document.getElementById("hireResult").innerHTML =
+    "年間の実質人件費は約 <strong>" + yen(totalCost) + "</strong>。この採用を支えるために必要な年間売上は約 <strong>" + yen(neededSales) + "</strong> です。";
+}
+</script>
+
+</body>
+</html>
