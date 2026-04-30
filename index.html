@@ -104,7 +104,12 @@ footer{text-align:center;color:#64748b;font-size:13px;padding:36px 20px}
 <!-- 1 -->
 <div class="calc" id="breakEven">
   <h2>損益分岐点計算機</h2>
-  <p class="desc">固定費と粗利率から、黒字化に必要な月商を計算します。</p>
+  <p class="desc"><p class="desc">
+この計算機では、毎月の固定費と粗利率から黒字化に必要な売上を算出できます。
+売上が伸びていても利益が出ない場合、固定費が重すぎる可能性があります。
+損益分岐点を把握することで、最低限必要な売上ラインが明確になり、
+経営判断や価格設定の基準として活用できます。
+</p></p>
   <div class="form">
     <label>月固定費（円）<input type="number" id="beFixed" placeholder="例：1200000"></label>
     <label>粗利率（%）<input type="number" id="beMargin" placeholder="例：40"></label>
@@ -118,7 +123,12 @@ footer{text-align:center;color:#64748b;font-size:13px;padding:36px 20px}
 <!-- 2 -->
 <div class="calc" id="grossProfit">
   <h2>粗利率計算機</h2>
-  <p class="desc">売上と原価から粗利額・粗利率を計算します。</p>
+  <p class="desc"><p class="desc">
+この計算機では、売上と原価から粗利額と粗利率を算出できます。
+粗利率はビジネスの収益性を示す重要な指標です。
+一般的に粗利率が低い場合、利益が出にくくなり資金繰りが悪化しやすくなります。
+改善のための指標として活用してください。
+</p></p>
   <div class="form">
     <label>売上（円）<input type="number" id="gpSales" placeholder="例：3000000"></label>
     <label>原価（円）<input type="number" id="gpCost" placeholder="例：1800000"></label>
@@ -213,7 +223,11 @@ document.getElementById("r5").innerText="値上げ後売上："+Math.round(newSa
 <!-- 3 -->
 <div class="calc" id="loan">
   <h2>借入返済シミュレーター</h2>
-  <p class="desc">借入額・年利・返済期間から、毎月返済額を計算します。</p>
+  <p class="desc"><p class="desc">
+借入額・金利・返済期間から、毎月の返済額と総返済額を計算できます。
+借入は資金繰りを助ける一方で、返済負担が経営を圧迫することもあります。
+無理のない返済計画を立てるための目安として活用してください。
+</p></p>
   <div class="form">
     <label>借入額（円）<input type="number" id="loanAmount" placeholder="例：10000000"></label>
     <label>年利（%）<input type="number" id="loanRate" placeholder="例：2.0" step="0.1"></label>
@@ -226,7 +240,11 @@ document.getElementById("r5").innerText="値上げ後売上："+Math.round(newSa
 <!-- 4 -->
 <div class="calc" id="cashRunway">
   <h2>資金寿命計算機</h2>
-  <p class="desc">今の現預金で、あと何ヶ月会社がもつかを計算します。</p>
+  <p class="desc"><p class="desc">
+現在の現預金と毎月の赤字額から、会社があと何ヶ月持つかを計算します。
+資金繰りは突然悪化することが多く、早めの把握が重要です。
+この数値を基準に、コスト削減や資金調達の判断に役立ててください。
+</p></p>
   <div class="form">
     <label>現預金残高（円）<input type="number" id="cashBalance" placeholder="例：5000000"></label>
     <label>毎月の赤字額（円）<input type="number" id="monthlyLoss" placeholder="例：800000"></label>
@@ -238,7 +256,11 @@ document.getElementById("r5").innerText="値上げ後売上："+Math.round(newSa
 <!-- 5 -->
 <div class="calc" id="laborRate">
   <h2>人件費率計算機</h2>
-  <p class="desc">売上に対する人件費の割合を計算します。</p>
+  <p class="desc"><p class="desc">
+売上に対する人件費の割合を計算します。
+人件費率が高すぎる場合、利益が圧迫される可能性があります。
+業種にもよりますが、適正水準を超えていないかの目安として活用してください。
+</p></p>
   <div class="form">
     <label>月売上（円）<input type="number" id="lrSales" placeholder="例：5000000"></label>
     <label>月人件費（円）<input type="number" id="lrLabor" placeholder="例：1800000"></label>
@@ -263,7 +285,11 @@ document.getElementById("r5").innerText="値上げ後売上："+Math.round(newSa
 <!-- 7 -->
 <div class="calc" id="neededSales">
   <h2>月商不足額計算機</h2>
-  <p class="desc">目標利益を達成するために、あといくら売上が必要か計算します。</p>
+  <p class="desc"><p class="desc">
+現在の売上と目標売上から、不足している売上額を計算します。
+目標達成までのギャップを可視化することで、
+営業活動や価格戦略の改善に役立てることができます。
+</p></p>
   <div class="form">
     <label>現在の月売上（円）<input type="number" id="nsCurrent" placeholder="例：3000000"></label>
     <label>月固定費（円）<input type="number" id="nsFixed" placeholder="例：1500000"></label>
@@ -277,7 +303,11 @@ document.getElementById("r5").innerText="値上げ後売上："+Math.round(newSa
 <!-- 8 -->
 <div class="calc" id="consumptionTax">
   <h2>消費税ざっくり計算</h2>
-  <p class="desc">税込・税抜金額から消費税額を計算します。</p>
+  <p class="desc"><p class="desc">
+税込・税抜金額から消費税額を計算します。
+日々の取引や見積もり、請求書作成時の確認に活用できます。
+正確な税額の把握は資金繰りにも影響するため重要です。
+</p></p>
   <div class="form">
     <label>金額（円）<input type="number" id="ctAmount" placeholder="例：110000"></label>
     <label>入力区分
@@ -295,7 +325,11 @@ document.getElementById("r5").innerText="値上げ後売上："+Math.round(newSa
 <!-- 9 -->
 <div class="calc" id="corporateTax">
   <h2>法人税ざっくり計算</h2>
-  <p class="desc">利益から法人税等の概算額を計算します。実際の税額は専門家に確認してください。</p>
+  <p class="desc"><p class="desc">
+利益から法人税の概算額を計算します。
+実際の税額は各種控除や条件により変動しますが、
+大まかな負担感を把握するための目安として活用できます。
+</p></p>
   <div class="form">
     <label>税引前利益（円）<input type="number" id="corpProfit" placeholder="例：5000000"></label>
     <label>概算税率（%）<input type="number" id="corpRate" value="30"></label>
@@ -318,7 +352,11 @@ document.getElementById("r5").innerText="値上げ後売上："+Math.round(newSa
 </div>
 <div class="calc">
 <h2>源泉徴収ざっくり計算</h2>
-<p class="desc">報酬から源泉所得税（10.21%）を差し引いた手取り額を計算します。</p>
+<p class="desc"><p class="desc">
+報酬から源泉所得税を差し引いた手取り額を計算します。
+フリーランスや外注費の支払い時に役立ちます。
+実際の税率は条件によって変わるため、あくまで目安としてご利用ください。
+</p></p>
 
 報酬金額：<input id="g1"><br>
 <button onclick="calcGensen()">計算</button>
@@ -337,7 +375,10 @@ document.getElementById("rG1").innerText =
 </script>
   <div class="calc">
 <h2>年収手取りざっくり計算</h2>
-<p class="desc">年収から税金・社会保険を簡易的に引いた手取りを計算します。</p>
+<p class="desc"><p class="desc">
+年収から税金や社会保険料を差し引いた手取り額の目安を計算します。
+生活設計や収入の見直しを考える際の参考として活用できます。
+</p></p>
 
 年収：<input id="g2"><br>
 <button onclick="calcNet()">計算</button>
@@ -355,7 +396,11 @@ document.getElementById("rG2").innerText =
 </script>
   <div class="calc">
 <h2>社会保険料ざっくり計算</h2>
-<p class="desc">年収の約15%として社会保険料の目安を計算します。</p>
+<p class="desc"><p class="desc">
+年収に対する社会保険料の目安を計算します。
+実際の保険料は制度や条件によって異なりますが、
+大まかな負担額を把握するための参考になります。
+</p></p>
 
 年収：<input id="g3"><br>
 <button onclick="calcSocial()">計算</button>
