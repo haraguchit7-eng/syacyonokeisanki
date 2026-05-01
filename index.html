@@ -545,20 +545,37 @@ function calcWithholding(){
 
 function calcAnnualNet(){
   const income = val("annualIncome");
-  const rate = val("netRate") / 100;
-  if(!income || !rate) return alert("年収と手取り率を入力してください");
+  if(!income) return alert("年収を入力してください");
+
+  let rate;
+  if(income < 3000000){
+    rate = 0.80;
+  } else if(income < 5000000){
+    rate = 0.76;
+  } else if(income < 8000000){
+    rate = 0.73;
+  } else {
+    rate = 0.70;
+  }
+
   const net = income * rate;
+  const deducted = income - net;
+
   document.getElementById("annualNetResult").innerHTML =
-    "手取り目安は <strong>" + yen(net) + "</strong> です。";
+    "手取り目安は <strong>" + yen(net) + "</strong> です。<br>" +
+    "税金・社会保険料などの控除目安は <strong>" + yen(deducted) + "</strong> です。";
 }
 
 function calcSocialInsurance(){
   const income = val("siIncome");
-  const rate = val("siRate") / 100;
-  if(!income || !rate) return alert("年収と社会保険料率を入力してください");
-  const social = income * rate;
+  if(!income) return alert("年収を入力してください");
+
+  const social = income * 0.15;
+  const monthly = social / 12;
+
   document.getElementById("siResult").innerHTML =
-    "社会保険料の目安は <strong>" + yen(social) + "</strong> です。";
+    "社会保険料の年間目安は <strong>" + yen(social) + "</strong> です。<br>" +
+    "月あたりの目安は <strong>" + yen(monthly) + "</strong> です。";
 }
 </script>
 
