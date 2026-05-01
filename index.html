@@ -318,12 +318,10 @@ footer a{color:#2563eb;text-decoration:none}
     実際の手取り額は扶養、居住地、控除などによって変動します。
   </p>
   <div class="form">
-    <label>年収（円）<input type="number" id="annualIncome" placeholder="例：5000000"></label>
-    <label>手取り率（%）<input type="number" id="netRate" value="75"></label>
-  </div>
-  <button onclick="calcAnnualNet()">計算する</button>
-  <div class="result" id="annualNetResult">結果がここに表示されます</div>
+  <label>年収（円）<input type="number" id="annualIncome" placeholder="例：5000000"></label>
 </div>
+<button onclick="calcAnnualNet()">計算する</button>
+<div class="result" id="annualNetResult">結果がここに表示されます</div>
 
 <div class="calc" id="socialInsurance">
   <h2>社会保険料ざっくり計算</h2>
@@ -548,6 +546,7 @@ function calcAnnualNet(){
   if(!income) return alert("年収を入力してください");
 
   let rate;
+
   if(income < 3000000){
     rate = 0.80;
   } else if(income < 5000000){
@@ -562,8 +561,8 @@ function calcAnnualNet(){
   const deducted = income - net;
 
   document.getElementById("annualNetResult").innerHTML =
-    "手取り目安は <strong>" + yen(net) + "</strong> です。<br>" +
-    "税金・社会保険料などの控除目安は <strong>" + yen(deducted) + "</strong> です。";
+    "手取り目安は <strong>" + yen(net) + "</strong><br>" +
+    "控除目安は <strong>" + yen(deducted) + "</strong>";
 }
 
 function calcSocialInsurance(){
