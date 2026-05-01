@@ -392,6 +392,52 @@ footer a{color:#2563eb;text-decoration:none}
   <div class="result" id="dpResult">結果がここに表示されます</div>
 </div>
 
+  <div class="calc" id="operatingMargin">
+  <h2>営業利益率計算機</h2>
+  <p class="desc">
+    売上に対する営業利益の割合を計算します。
+    営業利益率は本業の収益力を示す重要な指標で、
+    人件費や販管費を含めた「稼ぐ力」を把握できます。
+    同業他社との比較や改善判断の目安として活用してください。
+  </p>
+  <div class="form">
+    <label>売上（円）<input type="number" id="omSales"></label>
+    <label>営業利益（円）<input type="number" id="omProfit"></label>
+  </div>
+  <button onclick="calcOperatingMargin()">計算する</button>
+  <div class="result" id="omResult">結果がここに表示されます</div>
+</div>
+
+  <div class="calc" id="fixedRecovery">
+  <h2>固定費回収月数計算機</h2>
+  <p class="desc">
+    固定費と月間利益から、固定費を何ヶ月で回収できるかを計算します。
+    投資やコスト増加の判断時に、回収期間の目安として使えます。
+    回収が長すぎる場合は、コスト構造の見直しが必要です。
+  </p>
+  <div class="form">
+    <label>固定費（円）<input type="number" id="frFixed"></label>
+    <label>月間利益（円）<input type="number" id="frProfit"></label>
+  </div>
+  <button onclick="calcFixedRecovery()">計算する</button>
+  <div class="result" id="frResult">結果がここに表示されます</div>
+</div>
+
+  <div class="calc" id="salesPerEmployee">
+  <h2>1人当たり売上計算機</h2>
+  <p class="desc">
+    売上を従業員数で割り、1人あたりの生産性を算出します。
+    人員が適正かどうか、組織効率の判断に役立つ指標です。
+    同業平均と比較すると改善余地が見えてきます。
+  </p>
+  <div class="form">
+    <label>売上（円）<input type="number" id="seSales"></label>
+    <label>従業員数（人）<input type="number" id="seCount"></label>
+  </div>
+  <button onclick="calcSalesPerEmployee()">計算する</button>
+  <div class="result" id="seResult">結果がここに表示されます</div>
+</div>
+
 </section>
 
 <section id="about" class="calc">
@@ -455,6 +501,9 @@ function searchTool(){
   if(q.includes("原価")) return jump("costRate");
   if(q.includes("成長率")) return jump("salesGrowth");
   if(q.includes("返済比率")) return jump("debtPaymentRate");
+  if(q.includes("営業利益")) return jump("operatingMargin");
+　if(q.includes("回収期間")) return jump("fixedRecovery");
+　if(q.includes("1人あたり")) return jump("salesPerEmployee");
   alert("該当ツールが見つかりませんでした。キーワードを変えて検索してください。");
 }
 
@@ -660,6 +709,30 @@ function calcDebtPaymentRate(){
   const rate = payment / sales * 100;
   document.getElementById("dpResult").innerHTML =
     "借入返済比率は <strong>" + pct(rate) + "</strong> です。";
+}
+  function calcOperatingMargin(){
+  const s = val("omSales");
+  const p = val("omProfit");
+  if(!s) return alert("売上を入力してください");
+  const r = p / s * 100;
+  document.getElementById("omResult").innerHTML =
+    "営業利益率は <strong>" + pct(r) + "</strong> です。";
+}
+  function calcFixedRecovery(){
+  const f = val("frFixed");
+  const p = val("frProfit");
+  if(!f || !p) return alert("数値を入力してください");
+  const m = f / p;
+  document.getElementById("frResult").innerHTML =
+    "回収期間は約 <strong>" + (Math.round(m*10)/10) + "ヶ月</strong> です。";
+}
+  function calcSalesPerEmployee(){
+  const s = val("seSales");
+  const c = val("seCount");
+  if(!s || !c) return alert("数値を入力してください");
+  const r = s / c;
+  document.getElementById("seResult").innerHTML =
+    "1人あたり売上は <strong>" + yen(r) + "</strong> です。";
 }
 </script>
 
