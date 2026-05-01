@@ -41,7 +41,17 @@ input,select{width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:10px
 footer{text-align:center;color:#64748b;font-size:13px;padding:36px 20px}
 footer a{color:#2563eb;text-decoration:none}
 .badge{display:inline-block;background:#e0f2fe;color:#0369a1;border-radius:999px;padding:4px 10px;font-size:12px;font-weight:700;margin-bottom:10px}
-@media(max-width:850px){
+.ad-box{
+  margin:32px 0;
+  padding:18px;
+  border:1px dashed #cbd5e1;
+  border-radius:14px;
+  background:#f8fafc;
+  color:#94a3b8;
+  text-align:center;
+  font-size:13px;
+}
+  @media(max-width:850px){
   .grid,.form{grid-template-columns:1fr}
   nav{display:none}
   .hero h1{font-size:30px}
@@ -127,6 +137,10 @@ footer a{color:#2563eb;text-decoration:none}
   </div>
   <button onclick="calcBreakEven()">計算する</button>
   <div class="result" id="beResult">結果がここに表示されます</div>
+  
+  <div class="ad-box">
+  広告掲載予定
+</div>
   <p class="note">計算式：必要売上 =（固定費 + 目標利益）÷ 粗利率</p>
 </div>
 
@@ -159,6 +173,10 @@ footer a{color:#2563eb;text-decoration:none}
   </div>
   <button onclick="calcProfitRate()">計算する</button>
   <div class="result" id="profitResult">結果がここに表示されます</div>
+  
+  <div class="ad-box">
+  広告掲載予定
+</div>
 </div>
 
 <div class="calc" id="fixedRate">
@@ -205,6 +223,9 @@ footer a{color:#2563eb;text-decoration:none}
   </div>
   <button onclick="calcCashRunway()">計算する</button>
   <div class="result" id="cashResult">結果がここに表示されます</div>
+  <div class="ad-box">
+  広告掲載予定
+</div>
 </div>
 
 <div class="calc" id="laborRate">
@@ -220,6 +241,10 @@ footer a{color:#2563eb;text-decoration:none}
   </div>
   <button onclick="calcLaborRate()">計算する</button>
   <div class="result" id="lrResult">結果がここに表示されます</div>
+  
+  <div class="ad-box">
+  広告掲載予定
+</div>
 </div>
 
 <div class="calc" id="priceUp">
@@ -236,6 +261,10 @@ footer a{color:#2563eb;text-decoration:none}
   </div>
   <button onclick="calcPriceUp()">計算する</button>
   <div class="result" id="puResult">結果がここに表示されます</div>
+  
+  <div class="ad-box">
+  広告掲載予定
+</div>
 </div>
 
 <div class="calc" id="neededSales">
@@ -390,6 +419,10 @@ footer a{color:#2563eb;text-decoration:none}
   </div>
   <button onclick="calcDebtPaymentRate()">計算する</button>
   <div class="result" id="dpResult">結果がここに表示されます</div>
+  
+  <div class="ad-box">
+  広告掲載予定
+</div>
 </div>
 
   <div class="calc" id="operatingMargin">
