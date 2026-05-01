@@ -347,6 +347,51 @@ footer a{color:#2563eb;text-decoration:none}
   <div class="result" id="siResult">結果がここに表示されます</div>
 </div>
 
+  <div class="calc" id="costRate">
+  <h2>原価率計算機</h2>
+  <p class="desc">
+    売上に対する原価の割合を計算します。
+    原価率が高い場合、売上が伸びても利益が残りにくくなります。
+    仕入れ価格、外注費、材料費などの見直し判断に活用してください。
+  </p>
+  <div class="form">
+    <label>売上（円）<input type="number" id="crSales" placeholder="例：3000000"></label>
+    <label>原価（円）<input type="number" id="crCost" placeholder="例：1800000"></label>
+  </div>
+  <button onclick="calcCostRate()">計算する</button>
+  <div class="result" id="crResult">結果がここに表示されます</div>
+</div>
+
+<div class="calc" id="salesGrowth">
+  <h2>売上成長率計算機</h2>
+  <p class="desc">
+    前期売上と今期売上から、売上成長率を計算します。
+    成長率を見ることで、事業が伸びているのか、停滞しているのかを把握できます。
+    月次・四半期・年次の比較に活用してください。
+  </p>
+  <div class="form">
+    <label>前期売上（円）<input type="number" id="sgBefore" placeholder="例：24000000"></label>
+    <label>今期売上（円）<input type="number" id="sgAfter" placeholder="例：30000000"></label>
+  </div>
+  <button onclick="calcSalesGrowth()">計算する</button>
+  <div class="result" id="sgResult">結果がここに表示されます</div>
+</div>
+
+<div class="calc" id="debtPaymentRate">
+  <h2>借入返済比率計算機</h2>
+  <p class="desc">
+    毎月の売上に対して、借入返済額がどの程度の割合を占めているかを計算します。
+    返済比率が高いと、利益が出ていても資金繰りが苦しくなる可能性があります。
+    返済負担の重さを確認する目安として活用してください。
+  </p>
+  <div class="form">
+    <label>月売上（円）<input type="number" id="dpSales" placeholder="例：5000000"></label>
+    <label>月返済額（円）<input type="number" id="dpPayment" placeholder="例：600000"></label>
+  </div>
+  <button onclick="calcDebtPaymentRate()">計算する</button>
+  <div class="result" id="dpResult">結果がここに表示されます</div>
+</div>
+
 </section>
 
 <section id="about" class="calc">
@@ -407,6 +452,9 @@ function searchTool(){
   if(q.includes("源泉")) return jump("withholding");
   if(q.includes("手取り")) return jump("annualNet");
   if(q.includes("社会保険")) return jump("socialInsurance");
+  if(q.includes("原価")) return jump("costRate");
+  if(q.includes("成長率")) return jump("salesGrowth");
+  if(q.includes("返済比率")) return jump("debtPaymentRate");
   alert("該当ツールが見つかりませんでした。キーワードを変えて検索してください。");
 }
 
@@ -586,6 +634,32 @@ function calcSocialInsurance(){
   document.getElementById("siResult").innerHTML =
     "社会保険料の年間目安は <strong>" + yen(social) + "</strong> です。<br>" +
     "月あたりの目安は <strong>" + yen(monthly) + "</strong> です。";
+}
+  function calcCostRate(){
+  const sales = val("crSales");
+  const cost = val("crCost");
+  if(!sales) return alert("売上を入力してください");
+  const rate = cost / sales * 100;
+  document.getElementById("crResult").innerHTML =
+    "原価率は <strong>" + pct(rate) + "</strong> です。";
+}
+
+function calcSalesGrowth(){
+  const before = val("sgBefore");
+  const after = val("sgAfter");
+  if(!before || !after) return alert("前期売上と今期売上を入力してください");
+  const growth = (after - before) / before * 100;
+  document.getElementById("sgResult").innerHTML =
+    "売上成長率は <strong>" + pct(growth) + "</strong> です。";
+}
+
+function calcDebtPaymentRate(){
+  const sales = val("dpSales");
+  const payment = val("dpPayment");
+  if(!sales) return alert("月売上を入力してください");
+  const rate = payment / sales * 100;
+  document.getElementById("dpResult").innerHTML =
+    "借入返済比率は <strong>" + pct(rate) + "</strong> です。";
 }
 </script>
 
