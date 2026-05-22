@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>記事一覧（2ページ目）｜イグジット参謀</title>
+    <meta name="description" content="会社売却、M&A、IPO、事業承継に関する記事一覧（2ページ目）">
+
+    <style>
+        body {
+            margin: 0;
+            background: #f5f2ec;
+            color: #0e1730;
+            font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+            line-height: 1.8;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1100px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        header {
+            background: #fff;
+            border-bottom: 1px solid #e4ded2;
+            padding: 22px 0;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            color: #031b46;
+        }
+
+        .back-link {
+            font-size: 14px;
+            font-weight: 700;
+            color: #b88730;
+        }
+
+        .section {
+            padding: 70px 0;
+        }
+
+        .news-list {
+            background: #fff;
+            border: 1px solid #e4ded2;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 14px 34px rgba(3, 27, 70, .08);
+        }
+
+        .news-item {
+            display: flex;
+            gap: 28px;
+            padding: 22px 26px;
+            border-bottom: 1px solid #eee7db;
+            align-items: center;
+            transition: .2s;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-item:hover {
+            background: #faf6ee;
+        }
+
+        .date {
+            width: 110px;
+            font-size: 14px;
+            font-weight: 800;
+            color: #b88730;
+            flex-shrink: 0;
+        }
+
+        .title {
+            font-size: 17px;
+            font-weight: 800;
+            color: #031b46;
+            line-height: 1.5;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 32px;
+        }
+
+        .pagination a,
+        .pagination span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 42px;
+            height: 42px;
+            padding: 0 14px;
+            border-radius: 999px;
+            background: #fff;
+            border: 1px solid #e4ded2;
+            font-weight: 800;
+        }
+
+        .page-current {
+            background: #031b46 !important;
+            color: #fff;
+            border-color: #031b46 !important;
+        }
+
+        @media(max-width:760px) {
+
+            .news-item {
+                display: block;
+                padding: 18px;
+            }
+
+            .date {
+                display: block;
+                width: auto;
+                margin-bottom: 8px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="/" class="logo">イグジット参謀</a>
+            <a href="/blog.html" class="back-link">記事一覧へ戻る</a>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+
+            <div class="news-list">
+
+                <a href="/baikyaku-junbi.html" class="news-item">
+                    <span class="date">2026.04.27</span>
+                    <span class="title">会社売却は何年前から準備すべきか？</span>
+                </a>
+
+                <!-- 12本目以降ここへ追加 -->
+
+            </div>
+
+            <div class="pagination">
+                <a href="/blog.html">← 前へ</a>
+                <a href="/blog.html">1</a>
+                <span class="page-current">2</span>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
