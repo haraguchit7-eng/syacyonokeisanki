@@ -1,0 +1,686 @@
+AWSTATS DATA FILE 7.9 (build 20230108)
+# If you remove this file, all statistics for date 202604 will be lost/reset.
+# Last config file used to build this data file was /home/kulpfwob/domains/kulpfwob.v2009.coreserver.jp/awstats/exitsanbou.com/.data/awstats.exitsanbou.com.kulpfwob.v2009.coreserver.jp.conf.
+
+# Position (offset in bytes) in this file for beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 30
+POS_GENERAL 2198                
+POS_TIME 2880                
+POS_VISITOR 13956               
+POS_DAY 17471               
+POS_DOMAIN 3513                
+POS_LOGIN 3742                
+POS_ROBOT 3897                
+POS_WORMS 4268                
+POS_EMAILSENDER 4399                
+POS_EMAILRECEIVER 4542                
+POS_SESSION 17700               
+POS_FILESIZE 18146               
+POS_SIDER 17900               
+POS_FILETYPES 4677                
+POS_DOWNLOADS 4780                
+POS_OS 4828                
+POS_BROWSER 5049                
+POS_SCREENSIZE 5923                
+POS_UNKNOWNREFERER 5997                
+POS_UNKNOWNREFERERBROWSER 6511                
+POS_ORIGIN 6620                
+POS_SEREFERRALS 6754                
+POS_PAGEREFS 6898                
+POS_SEARCHWORDS 7046                
+POS_KEYWORDS 7198                
+POS_MISC 2544                
+POS_ERRORS 7257                
+POS_CLUSTER 3598                
+POS_SIDER_403 13592               
+POS_SIDER_400 13510               
+POS_SIDER_404 7374                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20260501000631 201 46276 17702558905535
+FirstTime 20260423112822
+LastTime 20260430225534
+LastUpdate 20260501041211 201 0 200 0 0
+TotalVisits 98                  
+TotalUnique 86                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 86                  
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+AddToFavourites 0 0 0
+JavascriptDisabled 0 0 0
+JavaEnabled 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+RealPlayerSupport 0 0 0
+FlashSupport 0 0 0
+TotalMisc 0 0 0
+PDFSupport 0 0 0
+DirectorSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 3 3 2230 0 1 1251
+1 2 2 1860 6 18 14438
+2 6 6 4512 8 45 63123
+3 6 6 3990 0 5 3088
+4 0 0 0 0 1 1251
+5 0 0 0 0 0 0
+6 2 2 1403 0 1 1251
+7 1 1 772 40 42 68483
+8 5 5 2292 66 69 107914
+9 2 2 1188 0 0 0
+10 6 6 3564 0 0 0
+11 44 44 24382 62 70 44023
+12 17 17 11885 61 70 106714
+13 2 2 1262 2 4 2918
+14 6 6 3332 0 6 0
+15 6 6 4320 0 6 0
+16 16 16 11626 336 353 539969
+17 21 21 16113 2 42 58086
+18 0 0 0 0 0 0
+19 0 0 0 0 2 2502
+20 11 11 6888 5 24 17062
+21 9 9 7164 2 36 40006
+22 8 8 6281 3 25 35309
+23 0 0 0 0 1 1251
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 1
+ip 173 173 115064
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 7
+curl 20 5737 20260423113353 0
+checker 14 8834 20260429021039 0
+bot[\s_+:,\.\;\/\\-] 4 832 20260428012514 0
+scrapy 2 1618 20260423203822 0
+Googlebot/ 1 631 20260424122958 0
+libwww\-perl 1 715 20260423112901 0
+scanner 1 752 20260423113038 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 2
+php 163 111740 0 0
+Unknown 10 3324 0 0
+END_FILETYPES
+
+# Downloads - Hits - Bandwidth
+BEGIN_DOWNLOADS 0
+END_DOWNLOADS
+
+# OS ID - Hits
+BEGIN_OS ID - Hits - Pages 11
+ios_iphone 4 4
+android10 1 1
+macosx9 2 2
+win7 9 9
+androidmarshmallow 5 5
+linux 39 39
+linuxubuntu 16 16
+win10 45 45
+Unknown 20 20
+macosx15 4 4
+win8.1 28 28
+END_OS
+
+# Browser ID - Hits - Pages
+BEGIN_BROWSER 41
+firefox83.0 2 2
+chrome122.0.0.0 2 2
+firefox121.0 1 1
+chrome137.0.0.0 1 1
+chrome127.0.0.0 1 1
+chrome33.0.1750.152 2 2
+chrome147.0.0.0 1 1
+safari 4 4
+safari17.3 1 1
+chrome131.0.0.0 4 4
+chrome91.0.4472.114 2 2
+Unknown 1 1
+firefox134.0 16 16
+chrome142.0.0.0 5 5
+netscape5.0 4 4
+chrome89.0.4389.114 1 1
+chrome124.0.0.0 1 1
+chrome146.0.0.0 1 1
+chrome91.0.4472.77 2 2
+chrome143.0.7499.4 1 1
+firefox147.0 8 8
+chrome88.0.4324.104 2 2
+firefox142.0 3 3
+chrome125.0.6422.142 1 1
+firefox110.0 28 28
+chrome120.0.0.0 1 1
+safari18.4 1 1
+chrome90.0.4430.85 1 1
+chrome130.0.0.0 5 5
+chrome92.0.4515.131 1 1
+chrome58.0.3029.110 6 6
+firefox120.0 19 19
+chrome92.0.4515.107 1 1
+chrome91.0.4472.135 1 1
+chrome132.0.0.0 2 2
+mozilla 17 17
+chrome108.0.0.0 1 1
+chrome36.0.1985.67 2 2
+firefox125.0 1 1
+chrome92.0.4515.159 1 1
+chrome78.0.3904.108 18 18
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 5
+Mozilla/5.0_(l9scan/2.0.13a39313a3a3236313a313033313a303035383a303034323;__https://leakix.net) 20260423112940
+Mozilla/5.0_(compatible;_InternetMeasurement/1.0;__https://internet-measurement.com/) 20260425074004
+axios/1.7.2 20260423122028
+Mozilla/5.0_(compatible;_CensysInspect/1.1;__https://about.censys.io/) 20260430155038
+Mozilla/5.0_(compatible;_Let's_Encrypt_validation_server;__https://www.letsencrypt.org) 20260423112839
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 1
+axios/1.7.2 20260423122028
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 173 173
+From1 0 0
+From2 0 0
+From3 0 0
+From4 0 0
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 0
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 0
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 3
+302 19 9717
+404 687 1052880
+403 18 26923
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referrer
+BEGIN_SIDER_404 273
+/postmark/.env 2 -
+/wordpress/ 1 -
+/server-status.php 2 -
+/ses/.env 2 -
+/.npmrc 5 -
+/crm/.env 2 -
+/.config/gcloud/credentials.db 2 -
+/v2/.env 2 -
+/2019/wp-includes/wlwmanifest.xml 6 -
+/wp/.env 2 -
+/api/__inspect 1 -
+/_phpinfo.php 2 -
+/laravel/.env 2 -
+/debug.php 2 -
+/backup.sql.gz 1 https://www.google.com/search
+/sitemaps/.env 2 -
+/_profiler/phpinfo 2 -
+/.env.development 4 -
+/old/phpinfo.php 2 -
+/docker-compose.yml 2 -
+/info.php 3 -
+/.docker/config.json 3 https://www.google.com/search
+/dist/.env 2 -
+/dashboard/.env 2 -
+/api/.env 3 -
+/.aws/config 1 -
+/transactional/.env 2 -
+/node/.env 2 -
+/next/.env 2 -
+/sito/wp-includes/wlwmanifest.xml 6 -
+/public_html/.env 2 -
+/smtp/.env 2 -
+/smtp/phpinfo.php 2 -
+/console 1 -
+/api/actuator/env 1 -
+/info 2 -
+/v1/.env 2 -
+/api/debug/pprof/ 1 -
+/old/.env 2 -
+/api/credentials 1 -
+/.env.save 6 -
+/express/.env 2 -
+/backups/.env 2 -
+/html/.env 2 -
+/application-prod.yml 1 https://www.google.com/search
+/blog/wp-includes/wlwmanifest.xml 6 -
+/phpinfo 2 -
+/export.sql 1 -
+/.netrc 3 -
+/wp/wp-includes/wlwmanifest.xml 6 -
+/.env.bak 7 -
+/magento/.env 2 -
+/.env.development.local 3 https://www.google.com/search
+/mailgun/.env 2 -
+/api 1 -
+/mailjet/.env 2 -
+/.env.preprod 2 -
+/nest/.env 2 -
+/php.php 2 -
+/cms/wp-includes/wlwmanifest.xml 6 -
+/graphql/.env 2 -
+/public/.env 2 -
+/static/style/sys_files/index.js 3 -
+/.env.production.local 2 -
+/vendor/.env 2 -
+/phpmyadmin/config.inc.php 1 -
+/.git-credentials 3 -
+/sendgrid/.env 2 -
+/.vscode/mcp.json 3 https://www.google.com/search
+/releases/.env 2 -
+/tools/.env 2 -
+/docker-compose.local.yml 1 -
+/sender/.env 2 -
+/bulk/.env 2 -
+/.gradle/gradle.properties 3 -
+/google-credentials.json 1 -
+/pi.php 2 -
+/@vite/client 1 -
+/prestashop/.env 2 -
+/phpversion.php 2 -
+/tmp/.env 2 -
+/p.php 2 -
+/api/console 1 -
+/.env.test 2 -
+/.env.example 2 -
+/backup.sql 5 -
+/internal/.env 2 -
+/client/.env 2 -
+/.env.dist 2 -
+/js/twint_ch.js 3 -
+/drupal/.env 2 -
+/wp-includes/wlwmanifest.xml 6 -
+/email/.env 2 -
+/js/lkk_ch.js 2 -
+/server-info.php 2 -
+/.env.dev 4 -
+/robots.txt 29 -
+/.env.ci 2 -
+/.aws/credentials 3 -
+/resources/.env 2 -
+/backend/.env 3 -
+/assets/js/message.js 1 -
+/database/.env 2 -
+/.composer/auth.json 2 -
+/backup/.env 2 -
+/v3/.env 2 -
+/app/.env 2 -
+/shop/.env 2 -
+/panel/.env 2 -
+/.gcloud/credentials 2 https://www.google.com/search
+/.env.stage 2 -
+/api/info.php 1 -
+/assets/.env 2 -
+/.env.live 2 -
+/staging/.env 2 -
+/cronlab/.env 2 -
+/test/phpinfo.php 2 -
+/_rNd9xZ7kL3 2 -
+/wp-config.php 1 -
+/database.sql 1 https://www.google.com/search
+/dev/phpinfo.php 2 -
+/mailer/.env 2 -
+/cron/.env 2 -
+/opencode.json 1 https://www.google.com/search
+/.env.remote 2 -
+/security.txt 7 -
+/website/wp-includes/wlwmanifest.xml 6 -
+/microservice/.env 2 -
+/shop/wp-includes/wlwmanifest.xml 6 -
+/notifications/.env 2 -
+/news/wp-includes/wlwmanifest.xml 6 -
+/_netrc 1 -
+/api/debug/vars 1 -
+/bot-connect.js 2 -
+/keys.env 1 -
+/_ignition/execute-solution 2 -
+/joomla/.env 2 -
+/campaign/.env 2 -
+/.env.backup 7 -
+/php-info.php 2 -
+/wp1/wp-includes/wlwmanifest.xml 6 -
+/static/style/protect/index.js 3 -
+/dev/.env 2 -
+/.roo/mcp.json 2 https://www.google.com/search
+/shopify/.env 2 -
+/exapi/.env 2 -
+/wordpress/.env 2 -
+/docker-compose.dev.yml 1 -
+/test/wp-includes/wlwmanifest.xml 6 -
+/api/_profiler/latest 1 -
+/.env.vercel 4 https://www.google.com/search
+/secrets.env 3 https://www.google.com/search
+/mail/phpinfo.php 2 -
+/test.php 2 -
+/webroot/index.php/_environment 2 -
+/symfony/.env 2 -
+/wp-config.old 2 https://www.google.com/search
+/lib/.env 2 -
+/db_backup.sql 5 https://www.google.com/search
+/live/.env 2 -
+/sftp-config.json 4 https://www.google.com/search
+/project/.env 2 -
+/storage/.env 2 -
+/www/.env 2 -
+/api/actuator/heapdump 1 -
+/.ssh/id_rsa 2 -
+/.env.prod 2 -
+/wordpress/wp-includes/wlwmanifest.xml 6 -
+/deploy/.env 2 -
+/uploads/.env 2 -
+/admin/phpinfo.php 2 -
+/_environment 2 -
+/wp2/wp-includes/wlwmanifest.xml 6 -
+/mailing/.env 2 -
+/actuator/env 2 -
+/id_rsa 1 https://www.google.com/search
+/.cursor/mcp.json 2 -
+/administrator/.env 2 -
+/docker-compose.prod.yml 1 -
+/terraform.tfvars 2 -
+/frontend/.env 2 -
+/temp/.env 2 -
+/api/v1/.env 2 -
+/private/.env 2 -
+/.env.uat 2 -
+/.gitconfig 1 -
+/.windsurf/mcp.json 1 https://www.google.com/search
+/actuator/heapdump 2 -
+/.env 6 -
+/.env.production 5 -
+/.env.swp 2 -
+/old_phpinfo.php 2 -
+/xmlrpc.php 6 -
+/.gem/credentials 3 -
+/.kilocode/mcp.json 3 https://www.google.com/search
+/erp/.env 2 -
+/en/.env 2 -
+/.env.local 6 -
+/admin/.env 2 -
+/webmail/phpinfo.php 2 -
+/site/wp-includes/wlwmanifest.xml 6 -
+/cms/.env 2 -
+/css/support_parent.css 2 -
+/public/phpinfo.php 2 -
+/terraform.tfvars.json 1 -
+/store/.env 2 -
+/.kube/config 4 -
+/i.php 2 -
+/gateway/.env 2 -
+/api/phpinfo.php 1 -
+/newsletter/.env 2 -
+/htdocs/.env 2 -
+/service/.env 2 -
+/current/.env 2 -
+/terraform.tfstate.backup 2 -
+/web/wp-includes/wlwmanifest.xml 6 -
+/.env~ 2 -
+/.azure/credentials 2 https://www.google.com/search
+/config.env 4 -
+/lab/.env 2 -
+/.terraform/terraform.tfstate 1 -
+/site/.env 2 -
+/portal/.env 2 -
+/backup.zip 5 -
+/server/.env 2 -
+/mail/.env 2 -
+/.env.docker 2 -
+/actuator/configprops 1 -
+/brevo/.env 2 -
+/core/app/.env 2 -
+/core/Database/.env 2 -
+/hosting/phpinfo.php 2 -
+/phpinfo.php 2 -
+/docker-compose.production.yml 1 -
+/credentials.json 1 -
+/rest/.env 2 -
+/.env.dusk.local 3 -
+/__inspect 1 -
+/.env.sample 2 -
+/.env.old 2 -
+/application.yml 1 -
+/scripts/.env 2 -
+/tmp/phpinfo.php 2 -
+/terraform.tfstate 1 -
+/2018/wp-includes/wlwmanifest.xml 6 -
+/firebase-adminsdk.json 1 https://www.google.com/search
+/api/v2/.env 2 -
+/psnlink/.env 2 -
+/.env.staging 2 -
+/release/.env 2 -
+/src/.env 2 -
+/app/config/parameters.yml 3 -
+/sparkpost/.env 2 -
+/core/.env 2 -
+/cpanel/phpinfo.php 2 -
+/media/wp-includes/wlwmanifest.xml 6 -
+/mandrill/.env 2 -
+/prod/.env 2 -
+/nuxt/.env 2 -
+/.well-known/security.txt 11 -
+/shared/.env 2 -
+/apps/.env 2 -
+/pinfo.php 2 -
+/notify/.env 2 -
+/.pypirc 2 -
+/.env.php 6 -
+/assets/js/auth.js 1 -
+/web/.env 2 -
+/service-account.json 1 -
+/build/.env 2 -
+/saas/.env 2 -
+/.config/gcloud/application_default_credentials.json 2 -
+/assets/js/qr_modal.js 2 -
+END_SIDER_404
+
+# URL with 400 errors - Hits - Last URL referrer
+BEGIN_SIDER_400 0
+END_SIDER_400
+
+# URL with 403 errors - Hits - Last URL referrer
+BEGIN_SIDER_403 4
+/config/.env 2 -
+/.git/config 6 -
+/ 6 -
+/.git/HEAD 4 -
+END_SIDER_403
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 86
+52.11.171.106 28 28 16632 20260429101057
+2a00:f2a0:0:f783::100 12 12 10448 20260426034511
+143.244.47.83 7 7 3334 20260425085444
+185.242.177.52 6 6 3588 20260424032952
+54.247.57.72 6 6 3332 20260423143048
+155.2.225.177 5 5 1430 20260423202235
+34.61.160.188 3 3 2256 20260424215019
+34.55.220.160 3 3 2256 20260425022526
+34.23.114.253 3 3 2256 20260426171002
+35.252.77.106 3 3 2256 20260430225534
+158.94.210.48 1 1 772 20260428004502
+149.57.180.25 1 1 809 20260427161301
+162.158.110.101 1 1 760 20260423113020
+173.239.217.49 1 1 631 20260423112913
+185.242.177.56 1 1 692 20260423113015
+66.132.186.196 1 1 809 20260423123956
+149.57.180.17 1 1 809 20260430170229
+91.231.89.18 1 1 893 20260423120249
+149.57.180.120 1 1 809 20260430170209
+2a14:7c1:400:3d::1 1 1 893 20260428160006
+149.57.180.76 1 1 809 20260423170744
+149.57.180.62 1 1 809 20260424170448
+149.57.180.57 1 1 809 20260425170450
+223.178.211.72 2 2 1458 20260424000119
+66.132.195.118 1 1 631 20260423124116
+2600:1f14:804:fd02:f642:10b5:769d:4e7 1 1 328 20260423112839
+87.236.176.201 1 1 772 20260425074004
+2602:80d:1004::3e 1 1 631 20260430155038
+23.27.145.190 1 1 809 20260427170632
+3.145.13.88 2 2 1440 20260424162149
+91.231.89.124 1 1 893 20260423120031
+18.230.191.196 2 2 1440 20260424164208
+23.27.145.63 1 1 809 20260425170526
+185.242.177.4 1 1 729 20260423122028
+23.27.145.134 1 1 809 20260423170621
+2600:1f14:804:fd02:113:4c8c:528a:d6c2 1 1 328 20260423112822
+23.27.145.14 1 1 809 20260427170559
+143.110.208.21 2 2 1440 20260426171356
+2602:80d:1007::52 1 1 809 20260430151132
+23.27.145.136 1 1 809 20260427161752
+2a05:d016:39f:3100:9cc8:2ef1:54cc:ccbe 2 2 656 20260423112839
+51.81.245.138 1 1 809 20260423112946
+213.139.9.135 1 1 631 20260424065015
+91.231.89.35 2 2 1430 20260423220256
+2a05:9403::5f9 2 2 862 20260423204243
+91.231.89.121 3 3 2501 20260423120259
+149.57.180.157 1 1 809 20260424170655
+2600:3000:2710:200::84 1 1 339 20260423112838
+91.231.89.36 2 2 1608 20260423220255
+2406:da18:85:1400:1821:eb10:1255:859d 1 1 339 20260423112839
+34.148.238.214 3 3 2256 20260425022202
+103.196.9.202 1 1 208 20260423113158
+149.57.180.161 1 1 809 20260430160539
+34.141.243.106 1 1 631 20260423172533
+91.231.89.120 1 1 893 20260423220234
+91.231.89.103 1 1 715 20260423120149
+23.27.145.45 1 1 809 20260425162207
+91.231.89.125 3 3 2323 20260423220316
+2a03:b0c0:1:d0::c6d:c001 1 1 893 20260423112940
+178.128.230.199 2 2 1440 20260424153746
+119.12.196.148 1 1 208 20260423113132
+149.143.128.194 1 1 752 20260423113039
+149.57.180.197 1 1 809 20260424161453
+91.231.89.19 1 1 893 20260423120011
+103.196.9.12 1 1 208 20260423113149
+149.143.130.82 1 1 752 20260423113040
+149.57.180.134 1 1 809 20260430160656
+2406:da18:85:1402:a04a:12d3:77e4:3d8c 1 1 339 20260423112822
+149.143.128.155 1 1 752 20260423113036
+172.70.242.105 1 1 760 20260423113018
+2a03:b0c0:3:d0::d09:a001 1 1 715 20260423112940
+178.128.40.138 2 2 1440 20260424154524
+185.247.137.232 1 1 772 20260425062038
+149.57.180.160 1 1 809 20260423161037
+2600:1f16:269:da02:8354:b16c:9a66:4b8e 2 2 656 20260423112839
+137.184.116.93 2 2 1440 20260426175316
+34.73.214.186 3 3 2256 20260424174232
+149.57.180.127 1 1 809 20260425162225
+199.45.155.92 1 1 631 20260423124123
+185.242.177.55 1 1 692 20260424032932
+2600:3000:1305:4212::82 1 1 339 20260423112822
+34.68.255.114 2 2 1262 20260423133238
+23.27.145.191 1 1 809 20260424161626
+103.196.9.137 1 1 631 20260423113131
+149.22.87.49 1 1 809 20260423225455
+91.231.89.23 1 1 715 20260423120043
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 8
+20260423 97 97 60312 56
+20260424 25 25 18083 14
+20260425 17 17 11584 9
+20260426 11 11 8500 5
+20260427 4 4 3236 4
+20260428 2 2 1665 2
+20260429 8 8 4752 1
+20260430 9 9 6932 7
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 6
+0s-30s 88
+2mn-5mn 1
+30s-2mn 2
+30mn-1h 1
+5mn-15mn 4
+15mn-30mn 2
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 3
+/ 163 111740 90 90
+/.well-known/acme-challenge/-h7GR7N-m88yqu0xghk_ai5OPcto22YIdIunSVXjXk8 5 1662 3 5
+/.well-known/acme-challenge/K5t9sfa_3UEzDcqaYPYXKgoVJLDAxg7ol0ma7OK3RC4 5 1662 5 3
+END_SIDER
+
+# Payload Range - Payload Frequency
+BEGIN_FILESIZE 3
+500-1K 184
+100-500 71
+1K-2K 739
+END_FILESIZE

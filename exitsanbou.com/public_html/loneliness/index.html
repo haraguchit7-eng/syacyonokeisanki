@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>社長の孤独｜イグジット参謀</title>
+
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        <body id="top">
+            margin: 0;
+            background: #020815;
+            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit
+        }
+
+        :root {
+            --gold: #d0a04a;
+            --navy: #031b46;
+        }
+
+        .hero {
+            position: relative;
+            min-height: 100svh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: #020817;
+        }
+
+        .hero::before{
+        content:"";
+        position:absolute;
+        inset:0;
+        background:
+        linear-gradient(
+        90deg,
+        rgba(2,8,23,.82) 0%,
+        rgba(2,8,23,.72) 34%,
+        rgba(2,8,23,.42) 62%,
+        rgba(2,8,23,.12) 100%
+        ),
+        url("/loneliness/loneliness-hero.png") 82% center/cover no-repeat;
+        opacity:.95;
+        z-index:0;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 42%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(255, 255, 255, .10), transparent 70%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .hero-inner {
+            width: min(1080px, calc(100% - 40px));
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .label {
+            display: inline-block;
+            color: var(--gold);
+            border: 1px solid rgba(208, 160, 74, .5);
+            border-radius: 999px;
+            padding: 9px 16px;
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: .16em;
+            margin-bottom: 32px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(48px, 7vw, 96px);
+            line-height: 1.12;
+            letter-spacing: .02em;
+            font-weight: 900;
+        }
+
+        h1 span {
+            color: var(--gold);
+            display: block;
+        }
+
+        .lead {
+            margin-top: 34px;
+            max-width: 620px;
+            font-size: clamp(18px, 2.1vw, 26px);
+            line-height: 2;
+            font-weight: 700;
+            color: rgba(255, 255, 255, .9);
+        }
+
+        .btn-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-top: 54px;
+        }
+
+        .btn {
+            min-height: 62px;
+            padding: 0 30px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, #e5bd68, #b88730);
+            color: #071126;
+            box-shadow: 0 12px 30px rgba(208, 160, 74, .35);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255, 255, 255, .32);
+            background: rgba(255, 255, 255, .06);
+            color: #fff;
+        }
+
+        .mini-note {
+            margin-top: 22px;
+            font-size: 13px;
+            letter-spacing: .08em;
+            color: rgba(255, 255, 255, .48);
+        }
+
+        .section {
+            padding: 110px 24px;
+        }
+
+        .container {
+            width: min(960px, 100%);
+            margin: 0 auto;
+        }
+
+        .copy {
+            font-size: clamp(32px, 5vw, 68px);
+            line-height: 1.55;
+            font-weight: 900;
+            margin: 0;
+        }
+
+        .gold {
+            color: var(--gold)
+        }
+
+        .text {
+            margin-top: 36px;
+            font-size: clamp(17px, 2vw, 22px);
+            line-height: 2.2;
+            color: rgba(255, 255, 255, .72);
+        }
+
+        .dark {
+            background: #020815
+        }
+
+        .image-section {
+            background:
+                linear-gradient(180deg, rgba(2, 8, 21, .88), rgba(3, 27, 70, .72), rgba(2, 8, 21, .94)),
+                url("/loneliness/loneliness-hero.png") center center/cover no-repeat;
+        }
+
+        .cta-box {
+            margin-top: 44px;
+            padding: 42px;
+            border-radius: 28px;
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid rgba(255, 255, 255, .14);
+            backdrop-filter: blur(12px);
+        }
+
+        .cta-box h2 {
+            margin: 0 0 18px;
+            font-size: clamp(28px, 4vw, 48px);
+            line-height: 1.45;
+        }
+
+        .cta-box p {
+            margin: 0;
+            color: rgba(255, 255, 255, .72);
+            font-size: 18px;
+            line-height: 2;
+        }
+
+        .final {
+            text-align: center;
+            background: #031b46;
+        }
+
+        .footer {
+            padding: 28px;
+            text-align: center;
+            color: rgba(255, 255, 255, .45);
+            font-size: 13px;
+            background: #020815;
+        }
+
+        @media(max-width:760px) {
+            .hero::before {
+                background:
+                    linear-gradient(180deg,
+                        rgba(2, 8, 23, .82) 0%,
+                        rgba(2, 8, 23, .82) 100%),
+                    url("/loneliness/loneliness-hero.png") 78% center/cover no-repeat;
+                opacity: .9;
+            }
+
+            .hero-inner {
+                width: calc(100% - 32px);
+            }
+
+            h1 {
+                font-size: 46px;
+            }
+
+            .lead {
+                font-size: 18px;
+            }
+
+            .btn-row {
+                flex-direction: column;
+                gap: 14px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .section {
+                padding: 82px 20px;
+            }
+
+            .cta-box {
+                padding: 30px 22px;
+            }
+        }
+        .diagnosis-section,
+        .contact-section{
+        background:#020815;
+        }
+        
+        .diagnosis-box{
+        margin-top:44px;
+        padding:38px;
+        border-radius:28px;
+        background:rgba(255,255,255,.06);
+        border:1px solid rgba(255,255,255,.14);
+        }
+        
+        .question-count{
+        color:var(--gold);
+        font-weight:900;
+        letter-spacing:.12em;
+        margin-bottom:14px;
+        }
+        
+        #questionText{
+        font-size:clamp(24px,3vw,36px);
+        line-height:1.6;
+        margin:0 0 28px;
+        }
+        
+        .answer-list{
+        display:grid;
+        gap:14px;
+        }
+        
+        .answer-list button{
+        width:100%;
+        padding:18px 20px;
+        border-radius:16px;
+        border:1px solid rgba(255,255,255,.16);
+        background:rgba(255,255,255,.08);
+        color:#fff;
+        font-weight:800;
+        text-align:left;
+        cursor:pointer;
+        }
+        
+        .result-box{
+        margin-top:30px;
+        padding:30px;
+        border-radius:22px;
+        background:#fff;
+        color:#031b46;
+        }
+        
+        .result-label{
+        color:#b88730;
+        font-size:13px;
+        font-weight:900;
+        letter-spacing:.12em;
+        margin-bottom:10px;
+        }
+        
+        .result-box h3{
+        margin:0 0 12px;
+        font-size:30px;
+        }
+        
+        .result-box p{
+        color:#5f6676;
+        line-height:1.9;
+        }
+        
+        .contact-form{
+        margin-top:42px;
+        display:grid;
+        gap:16px;
+        max-width:760px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea{
+        width:100%;
+        border:none;
+        border-radius:16px;
+        padding:18px;
+        background:rgba(255,255,255,.08);
+        border:1px solid rgba(255,255,255,.14);
+        color:#fff;
+        font-size:16px;
+        }
+        
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder{
+        color:rgba(255,255,255,.48);
+        }
+        
+        .contact-form textarea{
+        min-height:160px;
+        resize:vertical;
+        }
+        
+        .contact-form button{
+        border:none;
+        cursor:pointer;
+        width:fit-content;
+        }
+        
+        .thanks-message{
+        display:none;
+        margin-top:22px;
+        padding:18px;
+        border-radius:16px;
+        background:rgba(208,160,74,.14);
+        color:#f5d99a;
+        font-weight:800;
+        }
+        
+        @media(max-width:760px){
+        .diagnosis-box{
+        padding:26px 20px;
+        }
+        
+        .contact-form button{
+        width:100%;
+        }
+        }
+        /* 文字が黒くなる問題を強制修正 */
+        .copy,
+        .cta-box h2,
+        .final .copy,
+        .diagnosis-section .copy,
+        .contact-section .copy{
+        color:#ffffff !important;
+        }
+        
+        .copy .gold,
+        .gold{
+        color:#d0a04a !important;
+        }
+        
+        .cta-box p,
+        .final .text,
+        .diagnosis-section .text,
+        .contact-section .text{
+        color:rgba(255,255,255,.78) !important;
+        }
+        h1{
+        color:#ffffff !important;
+        }
+        
+        h1 span{
+        color:#d0a04a !important;
+        }
+    </style>
+</head>
+<script>
+    const questions = [
+  {
+    text: "このままで良いのか、不安になることがありますか？",
+    answers: [
+      { text: "よくある", type: "future" },
+      { text: "少しある", type: "future" },
+      { text: "あまりない", type: "growth" }
+    ]
+  },
+  {
+    text: "社長の悩みを、本音で相談できる相手はいますか？",
+    answers: [
+      { text: "いる", type: "growth" },
+      { text: "一部だけいる", type: "lonely" },
+      { text: "ほとんどいない", type: "lonely" }
+    ]
+  },
+  {
+    text: "後継者や引退後について考えることはありますか？",
+    answers: [
+      { text: "よくある", type: "succession" },
+      { text: "少しある", type: "succession" },
+      { text: "まだ考えていない", type: "future" }
+    ]
+  },
+  {
+    text: "売却・承継・継続で迷うことはありますか？",
+    answers: [
+      { text: "かなり迷っている", type: "exit" },
+      { text: "少し考えている", type: "exit" },
+      { text: "まだ具体的ではない", type: "future" }
+    ]
+  },
+  {
+    text: "今、一番近い気持ちはどれですか？",
+    answers: [
+      { text: "頭の中を整理したい", type: "future" },
+      { text: "誰かに壁打ちしたい", type: "lonely" },
+      { text: "出口戦略を考えたい", type: "exit" }
+    ]
+  }
+];
+
+let currentQuestion = 0;
+let scores = {
+  future: 0,
+  lonely: 0,
+  succession: 0,
+  exit: 0,
+  growth: 0
+};
+
+const questionCount = document.getElementById("questionCount");
+const questionText = document.getElementById("questionText");
+const answerList = document.getElementById("answerList");
+const resultBox = document.getElementById("resultBox");
+const resultTitle = document.getElementById("resultTitle");
+const resultText = document.getElementById("resultText");
+
+function renderQuestion(){
+  const q = questions[currentQuestion];
+  questionCount.textContent = `Q${currentQuestion + 1} / ${questions.length}`;
+  questionText.textContent = q.text;
+  answerList.innerHTML = "";
+
+  q.answers.forEach(answer => {
+    const button = document.createElement("button");
+    button.textContent = answer.text;
+    button.onclick = () => {
+      scores[answer.type]++;
+      currentQuestion++;
+
+      if(currentQuestion < questions.length){
+        renderQuestion();
+      } else {
+        showResult();
+      }
+    };
+    answerList.appendChild(button);
+  });
+}
+
+function showResult(){
+  questionCount.style.display = "none";
+  questionText.style.display = "none";
+  answerList.style.display = "none";
+  resultBox.style.display = "block";
+
+  const topType = Object.keys(scores).reduce((a,b) => scores[a] > scores[b] ? a : b);
+
+  const results = {
+    future: {
+      title: "未来整理型",
+      text: "今のあなたは、会社の未来だけでなく、社長自身の未来を整理するタイミングです。答えを急がず、選択肢を可視化することが大切です。"
+    },
+    lonely: {
+      title: "孤独経営型",
+      text: "本音を話せる相手が少なく、一人で悩みを抱えやすい状態です。まずは、頭の中を整理する壁打ち相手を持つことが重要です。"
+    },
+    succession: {
+      title: "承継検討型",
+      text: "後継者や引退後のことを考え始めている状態です。早めに選択肢を整理することで、承継・売却・継続の判断がしやすくなります。"
+    },
+    exit: {
+      title: "EXIT検討型",
+      text: "売却・承継・継続など、出口戦略を考えるタイミングに来ています。企業価値を高めながら、最適な出口を整理することが大切です。"
+    },
+    growth: {
+      title: "成長継続型",
+      text: "まだ会社を伸ばしたい意思が強い状態です。今後は、財務・組織・資金戦略を整えることで、より良い選択肢を持てるようになります。"
+    }
+  };
+
+  resultTitle.textContent = results[topType].title;
+  resultText.textContent = results[topType].text;
+}
+
+renderQuestion();
+
+const contactForm = document.getElementById("contactForm");
+const thanksMessage = document.getElementById("thanksMessage");
+
+if(contactForm){
+  contactForm.addEventListener("submit", async function(e){
+    e.preventDefault();
+
+    const data = new FormData(contactForm);
+
+    try{
+      const response = await fetch("https://formspree.io/f/xqewgjyz", {
+        method: "POST",
+        body: data,
+        headers: { "Accept": "application/json" }
+      });
+
+      if(response.ok){
+        contactForm.reset();
+        thanksMessage.style.display = "block";
+      } else {
+        alert("送信に失敗しました。時間をおいて再度お試しください。");
+      }
+    }catch(error){
+      alert("送信に失敗しました。通信環境をご確認ください。");
+    }
+  });
+}
+</script>
+<body>
+
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="label">EXIT SANBOU</div>
+
+            <h1>
+                社長は、<br>
+                <span>弱音を吐けない。</span>
+            </h1>
+
+            <div class="lead">
+                社員にも、家族にも、取引先にも。<br>
+      だから、一人で抱え込んでしまう。
+            </div>
+
+            <div class="btn-row">
+            <a href="#contact" class="btn btn-gold">一人で抱えないために相談する</a>
+            </div>
+
+            <p class="mini-note">
+                秘密厳守｜オンライン対応｜壁打ち相談歓迎
+            </p>
+        </div>
+    </section>
+
+    <section class="section dark">
+        <div class="container">
+            <p class="copy">
+                「大丈夫です」<br>
+      そう言うたびに、<br>
+                <span class="gold">本音だけが残っていく。</span>
+            </p>
+
+            <p class="text">
+                会社の未来。社員の生活。家族のこと。<br>
+      すべてを背負いながら、最後は一人で決めなければならない。<br><br>
+      だからこそ、社長には本音を整理する時間が必要です。
+            </p>
+        </div>
+    </section>
+
+    <section class="section image-section">
+        <div class="container">
+            <p class="copy">
+                売却か。<br>
+      承継か。<br>
+      継続か。
+            </p>
+
+            <p class="text">
+                答えを急ぐ必要はありません。<br>
+      まずは、今の不安と選択肢を言葉にすることから始めれば大丈夫です。
+            </p>
+
+            <div class="cta-box">
+                <h2>まずは、社長の現在地を整理する。</h2>
+                <p>
+                    売却・承継・継続・資金繰り…。<br>
+                    今抱えている悩みを、まずは言葉にしてください。
+                </p>
+
+            <div class="btn-row">
+                <a href="#contact" class="btn btn-gold">
+                    一人で抱えないために相談する
+                </a>
+            </div>
+        </div>
+    </section>
+<section class="section diagnosis-section" id="diagnosis">
+    <div class="container">
+        <p class="copy">
+            まずは、<br>
+            <span class="gold">社長の本音</span>を整理する。
+        </p>
+
+        <p class="text">
+            売却、承継、継続。<br>
+      いきなり答えを出す必要はありません。<br>
+      今のあなたに近い状態を、簡単な診断で整理できます。
+        </p>
+
+        </div>
+    </div>
+</section>
+    <section class="section dark">
+        <div class="container">
+            <p class="copy">
+                イグジット参謀は、<br>
+                <span class="gold">社長の未来</span>から逆算する。
+            </p>
+
+            <p class="text">
+                売却ありきではありません。<br>
+      承継、継続、資金繰り、財務改善、企業価値向上まで。<br><br>
+      社長自身の未来から逆算し、会社の次の一手を一緒に整理します。
+            </p>
+        </div>
+    </section>
+<section class="section contact-section" id="contact">
+    <div class="container">
+        <p class="copy">
+            一人で抱えないために、<br>
+      まずは話してください。
+        </p>
+
+        <p class="text">
+            資料がなくても大丈夫です。<br>
+      売却・承継・継続・資金繰り・将来不安まで、壁打ちだけでも構いません。
+        </p>
+
+        <form id="contactForm" class="contact-form">
+            <input type="text" name="name" required placeholder="お名前">
+            <input type="email" name="email" required placeholder="メールアドレス">
+            <input type="text" name="company" placeholder="会社名">
+            <textarea name="message" required placeholder="今、抱えている悩みや相談したい内容をご記入ください。"></textarea>
+
+            <button type="submit" class="btn btn-gold">
+        送信する
+      </button>
+        </form>
+
+        <div id="thanksMessage" class="thanks-message">
+            送信ありがとうございます。内容確認後、ご連絡いたします。
+        </div>
+    </div>
+</section>
+    <section class="section final">
+        <div class="container">
+            <p class="copy">
+                答えを急ぐ必要はありません。<br>
+      まずは、話すことから。
+            </p>
+
+            <p class="text">
+                秘密厳守。オンライン対応。資料不要。<br>
+      壁打ちだけでも構いません。
+            </p>
+
+            <div class="btn-row" style="justify-content:center;">
+                <a href="#contact" class="btn btn-gold">無料で経営相談する</a>
+                <a href="#top" class="btn btn-outline">TOPへ戻る</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        © EXIT SANBOU
+    </footer>
+
+</body>
+
+</html>

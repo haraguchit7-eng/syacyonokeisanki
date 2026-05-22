@@ -1,0 +1,7 @@
+Options -Indexes +ExecCGI
+AddHandler cgi-script .pl
+DirectoryIndex awstats.pl
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.kulpfwob.v2009.coreserver.jp$ [NC]
+RewriteRule ^(.*)$ http://kulpfwob.v2009.coreserver.jp/awstats/$1 [R=301,L]
